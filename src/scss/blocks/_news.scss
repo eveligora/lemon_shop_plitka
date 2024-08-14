@@ -101,12 +101,19 @@
 .news_items {
     display: flex;
     flex-direction: column;
-    row-gap: 5rem;
-    max-width: 60.1rem;
-    width: 100%;
-    align-items: center;
-    // min-height: 9rem;
+    align-items: flex-start;
+    row-gap: 7.1rem;
+}
 
+    .news_items_w {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+        max-width: 60.1rem;
+        width: 100%;
+        align-items: center;
+        // min-height: 9rem;
+    
 
     .news_item1{
         display: flex;
@@ -176,7 +183,7 @@
     @extend %btn_news;
     font-family: Roboto;
     text-transform: uppercase;
-    margin-left: -16rem;
+    padding-left: 8.7rem;
 }
       .arrow{
         margin-left: 1.9rem;
