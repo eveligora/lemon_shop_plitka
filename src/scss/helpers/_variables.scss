@@ -7,13 +7,16 @@
 $color_white: #fff;
 $color_black: #000;
 
-// $color_accent: #2947a9;
-// $color_title: #292e3d;
+$color_text: #111;
+$color_accent: #28bd25;
 
-// $color_hover: #F9995D;
+$bg_gray: #f5f5f5;
 
-// $font_1: "Work Sans", sans-serif;
-$transition_dur: .3s;
+$color_hover: $color_accent;
+
+$font_1: 'Roboto', sans-serif;
+$font_2: 'Lora', serif;
+$transition_dur: 0.3s;
 
 // breakpoints
 $point_1: 1200px;
@@ -24,4 +27,3 @@ $point_5: 767.98px;
 $point_6: 480px;
 $point_7: 375px; /* ! */
 $point_8: 374.98px; /* ! */
-
