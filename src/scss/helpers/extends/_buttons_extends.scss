@@ -42,3 +42,14 @@
 // 	@extend %white_btn_1;
 // 	@extend %btn_size_1;
 // }
+
+%btn_news {
+	@include st_btn;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: 0.075em;
+    text-align: left;
+    color: $color_accent;
+    text-decoration: none;
+}
