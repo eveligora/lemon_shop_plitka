@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>partners</title>
+    <link rel="stylesheet" href="./styles/style_15.css">
+</head>
+<body>
+    <section class="partners">
+        <div class="partner-logos">
+            <img src="images/logo1.png" alt="Салтовский Мясокомбинат">
+            <img src="images/logo2.png" alt="Домик Лесника">
+            <img src="images/logo3.png" alt="Парк Горького">
+            <img src="images/logo4.png" alt="АТТИКА">
+            <img src="images/logo5.png" alt="17 гор больница">
+        </div>
+    </section>
+    
