@@ -91,5 +91,20 @@ function watching() {
 	watch([cfg.srcDir + 'imgs/**/*'], imageSync);
 }
 
+
+async function loadPrettier() {
+    const prettier = await import('gulp-prettier');
+    return prettier.default;
+}
+
+async function format_check() {
+    const prettier = await loadPrettier();
+    return src('src/**/*.js')
+        .pipe(prettier({ singleQuote: true }))
+        .pipe(dest('src'));
+};
+
+// exports.format = format_check;
+exports.format_check = format_check;
 exports.build = parallel(stylesMin);
 exports.default = parallel(html, styles, scripts, imageSync, watching, browsersync);
