@@ -7,7 +7,7 @@ html {
 html,
 body {
 	height: 100%;
-	// font-family: $font_1;
+	font-family: $font_1;
 	font-weight: 400;
 	scroll-behavior: smooth;
 }
@@ -27,13 +27,26 @@ body {
 
 .section {
 	width: 100%;
+
+	padding: 12rem 0;
+
+	&.section--offset {
+		padding: 0;
+	}
+	&.section--bg {
+		background-color: $bg_gray;
+	}
 }
 
 .container {
-	// max-width: 126rem;
+	padding: 0 3rem;
+	max-width: 148rem;
 	width: 100%;
-
 	margin: 0 auto;
+
+	&.container--wide {
+		max-width: 100%;
+	}
 }
 
 .footer {
