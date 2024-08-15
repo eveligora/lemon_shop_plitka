@@ -27,7 +27,8 @@
 	
 	width: calc((100% - 1rem)/2);
 	min-height: 62rem;
-	position: relative;
+	// position: relative;
+	display: flex;
 	
 
 	.content_img__pic_w {
@@ -35,6 +36,7 @@
 		width: 100%;
 		height: auto;
 		display: block;
+		position: absolute;
 
 		.content_img__pic {
 			width: 100%;
@@ -51,16 +53,17 @@
 		background-color: $color_white;
 		max-width: 39.4rem;
 		width: 100%;
-		max-height: 15.8rem;
+		// max-height: 15.8rem;
 		padding-left: 3.9rem;
 		padding-top: 2.5rem;
 
-		position: absolute;
-		right: 0;
-		bottom: 0;
+		// position: absolute;
+		position: relative;
+		margin-top: auto;
+		margin-left: auto;
 
-		// margin-left: -39.4rem;
-		// margin-top: 46.1rem;
+
+
 
 		.img_tite__text {
 			color: $color_text;
