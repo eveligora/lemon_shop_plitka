@@ -1,42 +1,42 @@
 @mixin square_dots_bef($width, $hight, $cordX, $cordY, $color: 'null') {
 	@if $color == $color_accent {
 		content: '';
-        position: absolute;
-        height: $width;
-        width: $hight;
-        background-color: $color_accent;
-        z-index: -1;
-        left: $cordX;
-        bottom: $cordY;
+		position: absolute;
+		height: $width;
+		width: $hight;
+		background-color: $color_accent;
+		z-index: -1;
+		left: $cordX;
+		bottom: $cordY;
 	} @else {
 		content: '';
-        position: absolute;
-        height: $width;
-        width: $hight;
-        background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
-        z-index: -1;
-        left: $cordX;
-        bottom: $cordY;
+		position: absolute;
+		height: $width;
+		width: $hight;
+		background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
+		z-index: -1;
+		left: $cordX;
+		bottom: $cordY;
 	}
 }
 @mixin square_dots_aft($width, $hight, $cordX, $cordY, $color: 'null') {
 	@if $color == $color_accent {
 		content: '';
-        position: absolute;
-        height: $width;
-        width: $hight;
-        background-color: $color_accent;
-        z-index: -1;
-        right: $cordX;
-        top: $cordY;
+		position: absolute;
+		height: $width;
+		width: $hight;
+		background-color: $color_accent;
+		z-index: -1;
+		right: $cordX;
+		top: $cordY;
 	} @else {
 		content: '';
-        position: absolute;
-        height: $width;
-        width: $hight;
-        background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
-        z-index: -1;
-        right: $cordX;
-        top: $cordY;
+		position: absolute;
+		height: $width;
+		width: $hight;
+		background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
+		z-index: -1;
+		right: $cordX;
+		top: $cordY;
 	}
 }
