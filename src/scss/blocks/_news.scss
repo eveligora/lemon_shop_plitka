@@ -1,20 +1,6 @@
 // .container.container--news {
 // 	max-width: 140rem;
 // }
-
-.news_title_w {
-	@extend %news_title_w;
-	h2 {
-		@extend %h2_title;
-	}
-	span {
-		@extend %span;
-		&::before {
-			@extend %span_before;
-		}
-	}
-}
-
 .news_content {
 	display: flex;
 	justify-content: space-between;
