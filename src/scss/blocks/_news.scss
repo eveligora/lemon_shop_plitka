@@ -68,9 +68,11 @@
 			font-weight: 700;
 			line-height: 3.2rem;
 			text-align: left;
+			display: block;
+			text-decoration: none;
 		}
 		.img_tite__data {
-			font-size: Roboto;
+			font-family: $font_1;
 			font-size: 2rem;
 			font-weight: 400;
 			line-height: 3rem;
@@ -122,7 +124,7 @@
 			padding-left: 1.6rem;
 
 			.content_data {
-				font-family: Roboto;
+				font-family: $font_1;
 				font-size: 1.6rem;
 				font-weight: 500;
 				line-height: 3rem;
@@ -130,11 +132,14 @@
 				color: $color_gray;
 			}
 			.content_text {
-				font-family: Lora;
+				font-family: $font_2;
 				font-size: 2.6rem;
 				font-weight: 700;
 				line-height: 3.2rem;
 				text-align: left;
+				text-decoration: none;
+				display: block;
+				color: $color_text;
 			}
 		}
 	}
@@ -142,7 +147,7 @@
 
 .news_btn {
 	@extend %btn_news;
-	font-family: Roboto;
+	font-family: $font_1;
 	text-transform: uppercase;
     margin-left: 8.7rem;
 }
