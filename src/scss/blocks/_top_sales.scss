@@ -1,11 +1,11 @@
 @include bp($point_4, min) {
-	.top-sales__title_in {
+	.top_sales__title_in {
 		padding-left: 16.3rem;
 	}
 }
 
 @include bp($point_5) {
-	.top-sales__title_in {
+	.top_sales__title_in {
 		padding-left: 11.1rem;
 	}
 }
