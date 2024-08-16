@@ -14,7 +14,12 @@
 	object-position: center;
 }
 
-// use it fot section title.
+// use it for section title.
+// HTML structure:
+// <div class="news_title_w">
+// <span></span>
+// <h2>Свіжі новини</h2>
+// </div>
 
 // title_wrapper
 %news_title_w {
