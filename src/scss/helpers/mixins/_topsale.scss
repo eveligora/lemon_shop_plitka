@@ -2,8 +2,8 @@
 	@if $color == $color_accent {
 		content: '';
 		position: absolute;
-		height: $width;
-		width: $hight;
+		height: $hight;
+		width: $width;
 		background-color: $color_accent;
 		z-index: -1;
 		left: $cordX;
@@ -23,8 +23,8 @@
 	@if $color == $color_accent {
 		content: '';
 		position: absolute;
-		height: $width;
-		width: $hight;
+		height: $hight;
+		width: $width;
 		background-color: $color_accent;
 		z-index: -1;
 		right: $cordX;
