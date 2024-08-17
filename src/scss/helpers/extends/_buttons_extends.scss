@@ -45,11 +45,24 @@
 
 %btn_news {
 	@include st_btn;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 3rem;
-    letter-spacing: 0.075em;
-    text-align: left;
-    color: $color_accent;
-    text-decoration: none;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 3rem;
+	letter-spacing: 0.075em;
+	text-align: left;
+	color: $color_accent;
+	text-decoration: none;
+}
+
+%btn_main {
+	@include st_btn;
+	border-radius: 4.9rem;
+	border: 2px solid $color_accent;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 3rem;
+	color: $color_text;
+	text-decoration: none;
+	transition: all 0.1s ease-in-out;
+	letter-spacing: 7.5%;
 }
