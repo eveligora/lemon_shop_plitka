@@ -10,6 +10,23 @@
 	text-decoration: none;
 }
 
+@mixin app_btn {
+	@include st_btn;
+
+	font-family: $font_1;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	line-height: 1.5;
+
+	text-transform: uppercase;
+}
+
+@mixin btn_primary {
+	background-color: $color_accent;
+	color: $color_white;
+}
+
 //color extends
 // %transp_btn_1 {
 // 	@include st_btn;

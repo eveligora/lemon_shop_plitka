@@ -22,7 +22,6 @@ body {
 
 .main {
 	flex-grow: 1;
-
 }
 
 .section {
@@ -46,6 +45,18 @@ body {
 
 	&.container--wide {
 		max-width: 100%;
+
+		@include bp($point_2, min) {
+			padding: 0 10rem;
+		}
+
+		@include bp($point_3, max) {
+			padding: 0 4rem;
+		}
+
+		@include bp($point_5, max) {
+			padding: 0rem;
+		}
 	}
 }
 
