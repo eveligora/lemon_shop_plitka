@@ -1,6 +1,6 @@
 new Swiper('.hero .swiper', {
 	direction: 'horizontal',
-	effect: 'fade',
+	// effect: 'fade',
 	// fadeEffect: {
 	// 	crossFade: true,
 	// },
