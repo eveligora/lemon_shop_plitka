@@ -10,7 +10,7 @@
 	text-decoration: none;
 }
 
-@mixin app_btn {
+%app_btn {
 	@include st_btn;
 
 	font-family: $font_1;
@@ -22,7 +22,7 @@
 	text-transform: uppercase;
 }
 
-@mixin btn_primary {
+%btn_primary {
 	background-color: $color_accent;
 	color: $color_white;
 }

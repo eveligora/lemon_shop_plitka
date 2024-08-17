@@ -36,7 +36,6 @@
 		}
 
 		@include bp($point_6 + 95, max) {
-			text-align: center;
 			margin-bottom: 9rem;
 		}
 	}
@@ -83,7 +82,8 @@
 		}
 
 		@include bp($point_6 + 95, max) {
-			margin: 0 auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 
@@ -109,8 +109,8 @@
 	}
 
 	.hero__catalog_link {
-		@include app_btn;
-		@include btn_primary;
+		@extend %app_btn;
+		@extend %btn_primary;
 
 		border-radius: 5rem;
 
@@ -160,6 +160,11 @@
 			width: 3rem;
 			background-color: transparent;
 		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		margin-top: -5rem;
 	}
 
 	.swiper-button-prev {
