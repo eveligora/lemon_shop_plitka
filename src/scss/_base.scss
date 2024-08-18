@@ -72,13 +72,27 @@ body {
 //Title
 .news_title_w {
 	display: flex;
-	column-gap: 4.3rem;
-	margin-bottom: 10.1rem;
+	@include bp($point_2, min) {
+		margin-bottom: 10rem;
+		column-gap: 4.3rem;
+	}
+	@include bp($point_3, max) {
+		margin-bottom: 3.5rem;
+		column-gap: 2.5rem;
+	}
+
 	h2 {
-		font-size: 5rem;
 		font-weight: 700;
-		line-height: 6.3rem;
 		text-align: left;
+		font-family: $font_2;
+		@include bp($point_4, min) {
+			font-size: 5rem;
+			line-height: 6.3rem;
+		}
+		@include bp($point_5, max) {
+			font-size: 2.8rem;
+			line-height: 3.2rem;
+		}
 	}
 	span {
 		position: relative;
