@@ -1,0 +1,58 @@
+section.production {
+	padding-top: 12rem;
+	padding-bottom: 18.5rem;
+}
+
+.production__title {
+	@extend %st_h2;
+
+	position: relative;
+	margin-bottom: 3rem;
+
+	&::before {
+		@include section_title_prefix(12rem, 0.4rem, 5rem, $color_accent);
+	}
+}
+
+.production__content {
+	padding-left: 17.4rem;
+	display: flex;
+	gap: 18.7rem;
+	width: 100%;
+}
+
+.production__info {
+	background-color: $color_white;
+}
+
+.production__description {
+	@extend %st_text;
+	@extend %text_gray;
+}
+
+.production__image {
+	position: relative;
+	align-self: start;
+	width: 46rem;
+	height: 46rem;
+	margin-top: 3rem;
+	flex-shrink: 0;
+
+	&::after {
+		@include bottom_left_rect(
+			29.2rem,
+			38.3rem,
+			-6rem,
+			-6.2rem,
+			url(../../imgs/pseudo/dots-292x383.png) center center / cover
+		);
+	}
+
+	&::before {
+		@include top_right_rect(9.2rem, 9.2rem, -4.6rem, -4.6rem, $color_accent);
+	}
+
+	img {
+		@extend %cover_img;
+	}
+}
