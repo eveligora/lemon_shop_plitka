@@ -3,22 +3,37 @@
 // }
 .news_content {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	column-gap: 2rem;
+	gap: 4rem;
+
+	@include bp($point_2, min) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	@include bp($point_3, max) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 .content_img_w {
-	// max-width: 67.4rem;
-	
-	width: calc((100% - 1rem) / 2);
-	max-width: 67.4rem;
-	min-height: 62rem;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
-    justify-content: flex-end;
-	
+	justify-content: flex-end;
+	max-width: 67.4rem;
+	min-height: 62rem;
+
+	@include bp($point_2, min) {
+		width: calc((100% - 1rem) / 2);
+	}
+	@include bp($point_3, max) {
+		width: 100%;
+	}
+	@include bp($point_5, max) {
+		min-height: 31rem;
+	}
 
 	.content_img__pic_w {
 		// max-width: 67.4rem;
@@ -37,8 +52,8 @@
 	}
 
 	.content_img__text {
+		font-family: $font_2;
 		display: flex;
-		row-gap: 4rem;
 		flex-direction: column;
 		background-color: #fff;
 		max-width: 39.4rem;
@@ -47,15 +62,33 @@
 		padding-top: 2.5rem;
 		position: relative;
 
+		@include bp($point_2, min) {
+			row-gap: 4rem;
+		}
+		@include bp($point_3, max) {
+			row-gap: 3.2rem;
+		}
+		@include bp($point_5, max) {
+			max-width: 21rem;
+			width: 100%;
+			padding: 2.5rem 1rem 0.2rem 3rem;
+		}
 
 		.img_tite__text {
 			color: $color_text;
-			font-size: 2.6rem;
 			font-weight: 700;
-			line-height: 3.2rem;
 			text-align: left;
 			display: block;
 			text-decoration: none;
+			
+			@include bp($point_4, min) {
+				font-size: 2.6rem;
+				line-height: 3.2rem;
+			}
+			@include bp($point_5, max) {
+				font-size: 1.6rem;
+				line-height: 1.9rem;
+			}
 		}
 		.img_tite__data {
 			font-family: $font_1;
@@ -64,6 +97,15 @@
 			line-height: 3rem;
 			text-align: left;
 			color: $color_gray;
+
+			@include bp($point_4, min) {
+			font-size: 2rem;
+			line-height: 3rem;
+			}
+			@include bp($point_5, max) {
+				font-size: 1.2rem;
+				line-height: 3rem;
+			}
 		}
 	}
 }
@@ -73,8 +115,14 @@
 	flex-direction: column;
 	align-items: flex-start;
 	row-gap: 7.1rem;
-	width: calc((100% - 1rem)/2);
-	max-width: 60.1rem;
+
+	@include bp($point_2, min) {
+		width: calc((100% - 1rem) / 2);
+		max-width: 60.1rem;
+	}
+	@include bp($point_3, max) {
+		max-width: 67.4rem;
+	}
 }
 
 .news_items_w {
@@ -91,7 +139,13 @@
 		width: 100%;
 		flex-direction: row;
 		align-items: center;
-		column-gap: 3.9rem;
+
+		@include bp($point_4, min) {
+			column-gap: 3.9rem;
+		}
+		@include bp($point_5, max) {
+			column-gap: 0rem;
+		}
 
 		.item_data {
 			font-size: 2rem;
@@ -100,6 +154,12 @@
 			text-align: left;
 			color: $color_gray;
 			// padding-right: 3.9rem;
+			@include bp($point_4, min) {
+				display: block;
+			}
+			@include bp($point_5, max) {
+				display: none;
+			}
 		}
 		.item_content {
 			display: flex;
@@ -107,7 +167,13 @@
 			row-gap: 0.3rem;
 			justify-content: flex-start;
 			border-left: 0.4rem solid $color_accent;
-			padding-left: 1.6rem;
+
+			@include bp($point_4, min) {
+				padding-left: 1.6rem;
+			}
+			@include bp($point_5, max) {
+				padding-left: 1rem;
+			}
 
 			.content_data {
 				font-family: $font_1;
@@ -119,13 +185,18 @@
 			}
 			.content_text {
 				font-family: $font_2;
-				font-size: 2.6rem;
 				font-weight: 700;
-				line-height: 3.2rem;
+				line-height: 3.2rem;	
 				text-align: left;
 				text-decoration: none;
 				display: block;
 				color: $color_text;
+				@include bp($point_4, min) {
+					font-size: 2.6rem;
+				}
+				@include bp($point_5, max) {
+					font-size: 2rem;
+				}
 			}
 		}
 	}
@@ -135,7 +206,13 @@
 	@extend %btn_news;
 	font-family: $font_1;
 	text-transform: uppercase;
-    margin-left: 8.7rem;
+	margin-left: 8.7rem;
+	@include bp($point_4, min) {
+		margin-left: 8.7rem;
+	}
+	@include bp($point_5, max) {
+		margin-left: 0;
+	}
 }
 .arrow {
 	margin-left: 1.9rem;
