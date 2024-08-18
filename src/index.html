@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 	</head>
 	<body>
 		<div class="wrapper">
@@ -29,5 +31,13 @@
 			@@include('./html/footer.html')
 		</div>
 		<script src="js/script.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+			  pagination: {
+				el: ".swiper-pagination",
+			  },
+			});
+		</script>
 	</body>
 </html>
