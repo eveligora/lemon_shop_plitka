@@ -17,8 +17,13 @@ section.production {
 .production__content {
 	padding-left: 17.4rem;
 	display: flex;
-	gap: 18.7rem;
+	gap: 7rem 18.7rem;
 	width: 100%;
+
+	@media screen and (max-width: 1440px) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .production__info {
