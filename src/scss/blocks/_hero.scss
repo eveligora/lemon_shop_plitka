@@ -1,6 +1,7 @@
 .hero {
 	position: relative;
 	padding: 11.4rem 0 17.4rem 0;
+	color: $color_white;
 	overflow: hidden;
 
 	&::after {
@@ -13,8 +14,6 @@
 		background-color: $color_white;
 		box-shadow: 0 0 3rem 4rem $color_white;
 	}
-
-	color: $color_white;
 
 	button {
 		width: 5.4rem;
