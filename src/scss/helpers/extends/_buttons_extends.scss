@@ -58,28 +58,19 @@
 	@include st_btn;
 	border-radius: 4.9rem;
 	border: 2px solid $color_accent;
+	font-family: $font_1;
 	font-size: 2rem;
 	font-weight: 700;
 	line-height: 3rem;
 	color: $color_text;
 	text-decoration: none;
+	text-transform: uppercase;
 	transition: all 0.1s ease-in-out;
 	letter-spacing: 7.5%;
-}
-
-%app_btn {
-	@include st_btn;
-
-	font-family: $font_1;
-	font-size: 2rem;
-	font-weight: 700;
-	letter-spacing: 0.12em;
-	line-height: 1.5;
-
-	text-transform: uppercase;
 }
 
 %btn_primary {
 	background-color: $color_accent;
 	color: $color_white;
+	letter-spacing: 0.12em;
 }
