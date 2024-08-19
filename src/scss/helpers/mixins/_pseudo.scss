@@ -1,0 +1,32 @@
+@mixin top_right_rect($width, $hight, $top, $right, $background) {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: $width;
+	height: $hight;
+	top: $top;
+	right: $right;
+	background: $background;
+}
+
+@mixin bottom_left_rect($width, $hight, $bottom, $left, $background) {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: $width;
+	height: $hight;
+	bottom: $bottom;
+	left: $left;
+	background: $background;
+}
+
+@mixin section_title_prefix($width, $height, $offset, $color) {
+	content: '';
+	position: absolute;
+	width: $width;
+	height: $height;
+	top: 50%;
+	left: -($width + $offset);
+	transform: translateY(-50%);
+	background: $color;
+}

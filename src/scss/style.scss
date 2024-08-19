@@ -3,13 +3,17 @@
 @import './helpers/variables';
 @import './helpers/mixins/breakpoints';
 @import './helpers/mixins/topsale';
+@import './helpers/mixins/pseudo';
 @import './helpers/extends/extends';
 @import './helpers/extends/buttons_extends';
+@import './helpers/extends/header_extends';
 @import './base';
 
 @import './blocks/header';
 
 @import './blocks/hero';
+@import './blocks/hero_plytka';
+@import './blocks/production';
 @import './blocks/news';
 @import './blocks/top_sales';
 @import './blocks/services';

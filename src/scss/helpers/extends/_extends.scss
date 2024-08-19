@@ -13,3 +13,13 @@
 	object-fit: cover;
 	object-position: center;
 }
+
+%st_text {
+	font-family: $font_1;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+%text_gray {
+	color: $color_gray;
+}
