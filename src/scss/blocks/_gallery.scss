@@ -1,0 +1,123 @@
+.gallery {
+    width: 100%;
+    padding: 1.2rem;
+
+    @include bp($point_3) {
+        padding: 1.5rem;
+    }
+
+    @include bp($point_5) {
+        padding: 2rem;
+    }
+}
+
+.gallery__title {
+    position: relative;
+    width: 69.2rem;
+    height: 4.6rem;
+    margin-bottom: 2.2rem;
+
+    font-family: Lora;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 3.9rem;
+    color: $color_text;
+    text-align: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        background: $color_accent no-repeat;
+        height: 0.4rem;
+    }
+
+    @include bp($point_4, min) {
+        &::before {
+            width: 12rem;
+            left: 0;
+        }
+    }
+
+    @include bp($point_5) {
+        width: 46.2rem;
+        font-size: 3.2rem;
+        margin-bottom: 1rem;
+
+        &::before {
+            width: 7.6rem;
+            left: 0;
+        }
+    }
+
+    @include bp($point_8) {
+        width: 100%;
+        font-size: 2.2rem;
+
+        &::before {
+            width: 3.6rem;
+            left: 0;
+        }
+    }
+}
+
+.gallery__descr {
+    width: 118.6rem;
+    height: 5.2rem;
+    padding-left: 18rem;
+    margin-bottom: 7rem;
+
+    font-family: Roboto;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $color_gray;
+    text-align: left;
+
+    @include bp($point_3) {
+        width: 90%;
+        height: 50%;
+        padding-left: 18rem;
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+    }
+
+    @include bp($point_5) {
+        width: 100%;
+        padding-left: 0rem;
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+
+    @include bp($point_8) {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 3.7rem;
+    justify-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include bp($point_3) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+    }
+
+    @include bp($point_5) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2.5rem;
+    }
+
+    @include bp($point_8) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+}
