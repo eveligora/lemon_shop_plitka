@@ -97,14 +97,13 @@ async function loadPrettier() {
     return prettier.default;
 }
 
-async function format_check() {
+async function pretty() {
     const prettier = await loadPrettier();
-    return src('src/**/*.js')
-        .pipe(prettier({ singleQuote: true }))
+    return src(['src/**/*', '!src/imgs/**/*'])
+        .pipe(prettier())
         .pipe(dest('src'));
 };
 
-// exports.format = format_check;
-exports.format_check = format_check;
-exports.build = parallel(stylesMin);
+exports.format = pretty;
+exports.stylesMin = stylesMin;
 exports.default = parallel(html, styles, scripts, imageSync, watching, browsersync);
