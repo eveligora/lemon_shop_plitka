@@ -69,12 +69,11 @@
 	letter-spacing: 7.5%;
 }
 
-
 %btn_primary {
 	background-color: $color_accent;
 	color: $color_white;
 	letter-spacing: 0.12em;
-
+}
 %btn_services {
 	@include st_btn;
 	max-width: 28.2rem;
