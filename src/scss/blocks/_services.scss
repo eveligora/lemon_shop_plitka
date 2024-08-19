@@ -1,7 +1,6 @@
 .services__in {
 	display: flex;
 	flex-direction: column;
-	row-gap: 4.4rem;
 }
 .services__row {
 	width: 100%;
@@ -14,12 +13,6 @@
 	@include bp($point_3) {
 		flex-direction: column;
 		row-gap: 4rem;
-	}
-
-	&.services__row.services__row--two {
-		@include bp($point_2, min) {
-			column-gap: 5rem;
-		}
 	}
 }
 .services__title_w {
@@ -78,23 +71,70 @@
 		line-height: 6.3rem;
 	}
 }
-.services__row_coll {
+.services_slider {
+	width: 100%;
+}
+.services_slider__w {
+	// margin-bottom: 4.6rem;
+	
+	
 	@include bp($point_2, min) {
-		width: calc(100% - 5rem / 3);
+		padding: 5.8rem 0;
+	}
+	
+	@include bp($point_3) {
+		padding: 3.6rem 0 5.8rem;
+	}
+	
+}
+.services_slider__item {
+	display: flex;
+	align-items: center;
+	@include bp($point_2, min) {
+		justify-content: center;
+		column-gap: 5.4rem;
 	}
 
 	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 5rem;
+	}
+}
+.services__item_coll {
+	@include bp($point_2, min) {
+		width: calc(100% - 5.4rem / 3);
+	}
+
+	@include bp($point_2) {
 		width: 100%;
 	}
 
-	&.services__row_coll.services__row_coll--one {
+	&.services__item_coll.services__item_coll--two {
+		background-color: $bg_gray;
+	}
+	&.services__item_coll.services__item_coll--one {
 		@include bp($point_3) {
 			display: none;
 		}
 	}
-	&.services__row_coll.services__row_coll--two {
-		background-color: $bg_gray;
-		position: relative;
+}
+.services__item_title {
+	font-size: 5.4rem;
+	font-weight: 700;
+	line-height: 6rem;
+	color: $color_black;
+	border-left: 4px solid $color_accent;
+	padding-left: 6rem;
+}
+.services__img_w {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: contain;
+
+	
+	
+	@include bp($point_2, min) {
 		&::before {
 			content: '';
 			position: absolute;
@@ -102,69 +142,17 @@
 			width: 7rem;
 			background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
 			z-index: -1;
-
-			@include bp($point_2, min) {
-				left: -3rem;
-				top: -3.3rem;
-			}
-
-			@include bp($point_3) {
-				top: -3.5rem;
-				right: -3rem;
-			}
+			left: 32.4%;
+			top: -3.2rem;
 		}
 	}
+	
+	
+	
+	
 }
-.services__coll_title {
-	font-size: 5.4rem;
-	font-weight: 700;
-	line-height: 6rem;
-	color: $color_black;
-	border-left: 0.4rem solid $color_accent;
-	padding-left: 6.4rem;
-}
-.services_slider {
-	position: relative;
-
-	@include bp($point_2, min) {
-		width: 44rem;
-		right: 4.4rem;
-	}
-
-	@include bp($point_3) {
-		width: 100%;
-		right: 3.2rem;
-	}
-}
-.slider_w {
-	width: 100%;
-}
-.slider__item {
-	width: 100%;
-}
-.slider__img_w {
-	width: 100%;
-	height: 100%;
-	display: block;
-	object-fit: contain;
-}
-.slider__img {
+.services__img {
 	@extend %contain_img;
-}
-.slider_pagination {
-	@include bp($point_2, min) {
-		margin-left: 4.4rem;
-	}
-
-	@include bp($point_3) {
-		margin-left: 3.2rem;
-	}
-
-	span {
-		background-color: $color_accent;
-		width: 1.4rem;
-		height: 1.4rem;
-	}
 }
 .services__info {
 	display: flex;
@@ -179,37 +167,25 @@
 	color: #333333;
 }
 .services__info_descr {
-	color: $color_gray;
+	font-size: 2rem;
 	line-height: 3rem;
-	@include bp($point_2, min) {
-		min-width: 46rem;
-		font-size: 2rem;
-	}
-
-	@include bp($point_3) {
-		width: 100%;
-		font-size: 1.8rem;
-	}
+	color: $color_gray;
 }
 .services__info_btn {
 	@extend%btn_services;
-	transition: all 0.5s ease-in-out;
-
-	@include bp($point_3) {
-		margin: 0 auto;
-	}
-
-	&::after {
-		content: '';
-		width: 1.8rem;
-		height: 1.6rem;
-		background-image: url(../imgs/services/arrow.svg);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		margin-left: 1.4rem;
-	}
 	&:hover {
 		box-shadow: 1px 1px 24px 5px rgba(40, 189, 37, 0.91);
+	}
+	
+	@include bp($point_3) {
+	margin: 0 auto;
+	}
+	
+}
+.slider_pagination {
+	span {
+		background-color: $color_accent;
+		width: 1.5rem;
+		height: 1.5rem;
 	}
 }
