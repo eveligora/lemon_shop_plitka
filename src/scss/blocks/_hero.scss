@@ -1,11 +1,16 @@
 .hero {
 	position: relative;
-	padding: 11.4rem 0 17.4rem 0;
+	color: $color_white;
 	overflow: hidden;
+
+	.container--wide {
+		padding: 11.4rem 0 26.2rem 0;
+	}
 
 	&::after {
 		content: '';
 		position: absolute;
+		z-index: 1;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -13,8 +18,6 @@
 		background-color: $color_white;
 		box-shadow: 0 0 3rem 4rem $color_white;
 	}
-
-	color: $color_white;
 
 	button {
 		width: 5.4rem;
@@ -46,6 +49,10 @@
 		}
 	}
 
+	.swiper-slide {
+		margin: 0 -1px;
+	}
+
 	.swiper-button-prev,
 	.swiper-button-next {
 		margin-top: -5rem;
@@ -62,25 +69,17 @@
 	}
 }
 
-.hero__content_wrapper {
-	@include bp($point_5, max) {
-		padding: 0 7rem 0 8rem;
-	}
-
-	@include bp($point_6 + 95, max) {
-		padding: 0;
-	}
-}
-
 .hero__content {
-	margin-bottom: 2.6rem;
+	@include bp($point_4, min) {
+		padding-bottom: 2.6rem;
+	}
 
 	@include bp($point_5, max) {
-		margin-bottom: 9rem;
+		padding: 0 7rem 9rem 8rem;
 	}
 
 	@include bp($point_6 + 95, max) {
-		margin-bottom: 9rem;
+		padding: 0 0 9rem 0;
 	}
 }
 
@@ -152,11 +151,25 @@
 	}
 }
 
-.hero__catalog_link {
-	@extend %app_btn;
-	@extend %btn_primary;
+.hero__catalog-link-wrapper {
+	position: absolute;
+	bottom: 16rem;
+	left: 0;
+	width: 100%;
+	z-index: 1;
 
-	border-radius: 5rem;
+	@include bp($point_5, max) {
+		padding: 0 7rem 0 8rem;
+	}
+
+	@include bp($point_6 + 95, max) {
+		padding: 0;
+	}
+}
+
+.hero__catalog_link {
+	@extend %btn_main;
+	@extend %btn_primary;
 
 	@include bp($point_4, min) {
 		width: 28.2rem;

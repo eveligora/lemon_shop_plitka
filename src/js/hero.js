@@ -1,9 +1,5 @@
-new Swiper('.hero .swiper', {
+new Swiper('.hero', {
 	direction: 'horizontal',
-	// effect: 'fade',
-	// fadeEffect: {
-	// 	crossFade: true,
-	// },
 	loop: true,
 	navigation: {
 		nextEl: '.swiper-button-next',
