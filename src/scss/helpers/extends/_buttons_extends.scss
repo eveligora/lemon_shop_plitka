@@ -66,3 +66,16 @@
 	transition: all 0.1s ease-in-out;
 	letter-spacing: 7.5%;
 }
+%btn_services {
+	@include st_btn;
+	max-width: 28.2rem;
+	height: 8.8rem;
+	border-radius: 5rem;
+	background-color: $color_accent;
+	color: $color_white;
+	padding: 0 5.8rem;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 8.8rem;
+	letter-spacing: 7.5%;
+}
