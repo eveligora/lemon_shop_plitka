@@ -2,9 +2,15 @@
 @import './helpers/reset';
 @import './helpers/variables';
 @import './helpers/mixins/breakpoints';
+@import './helpers/mixins/topsale';
 @import './helpers/extends/extends';
 @import './helpers/extends/buttons_extends';
 @import './base';
 
+@import './blocks/header';
+
 @import './blocks/news';
+@import './blocks/top_sales';
+@import './blocks/services';
+@import './blocks/advantages';
 @import './blocks/features';
