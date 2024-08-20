@@ -1,16 +1,13 @@
 <section class="section">
 	<div class="container">
-		@@include('./components/h2title.html', { 
-			title: "Хіт продажу",
-			block: 'top_sales',
-			arr: [''],
+		@@include('../components/h2title.html', { 
+			title: "Наш асортимент",
+			arr: ['Замовник може вибрати різні кольори плитки: сірий, оливковий, червоний, чорний, сірий, жовтий та інші популярні кольори. Різноманітна кольорова гама з більш ніж 15 кольорів дозволяє створити неповторний дизайн покриття! Наша тротуарна плитка буде довгі роки прикрашати будь-яку територію.', 'Компанія «Ігуана» пропонує тротуарну плитку за доступною ціною.'],
+			block: 'reason_to_buy',
 			mod: '',
 		 })
 		<div class="top_sales__product_wrapper">
-
-			
-			
-			@@include('./components/goods_card.html', {
+			@@include('../components/goods_card.html', {
 				 card_title: 'Старе місто', 
 				 high: '40',
 				  price: '240', 
@@ -22,7 +19,7 @@
 				   'product_card__availabel_color--black'],
 				 })
 			
-			@@include('./components/goods_card.html', {
+			@@include('../components/goods_card.html', {
 				card_title: 'Креатив', 
 				high: '50', 
 				price: '245', 
@@ -30,7 +27,7 @@
 				arr: [''],
 				})
 				
-			@@include('./components/goods_card.html', {
+			@@include('../components/goods_card.html', {
 				 card_title: 'Цегла', 
 				 high: '60', 
 				 price: '270', 
@@ -41,7 +38,7 @@
 				   'product_card__availabel_color--black'],
 				 })
 
-			@@include('./components/goods_card.html', {
+			@@include('../components/goods_card.html', {
 				card_title: 'Львівській камінь', 
 				high: '50', 
 				price: '270', 
