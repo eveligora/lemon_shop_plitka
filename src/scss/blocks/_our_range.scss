@@ -1,0 +1,44 @@
+@include bp($point_4, min) {
+	.our_range__title_in,
+    .our_range_descr_in {
+		padding-left: 16.3rem;
+        margin-bottom: 3.6rem;
+	}
+}
+
+@include bp($point_5) {
+	.our_range__title_in {
+		padding-left: 11.1rem;
+        margin-bottom: 3.6rem;
+	}
+}
+
+@include bp($point_5) {
+    .our_range_descr_in{
+        padding-left: 0;
+    }
+}
+
+.our_range_descr_in p{
+    max-width: 110rem;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    text-align: left;
+    color: $color_gray;
+
+    &:last-child{
+        margin-bottom: 10.8rem;
+    }
+
+    
+    @include bp($point_5) {
+        &:last-child{
+            margin-bottom: 3rem;
+        }
+    }
+    
+    
+}
+

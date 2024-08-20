@@ -1,0 +1,94 @@
+
+@include bp($point_5) {
+    .container{
+        padding: 0 2rem;
+    }
+}
+@include bp($point_5) {
+    .section{
+        padding: 5rem 0;
+    }
+}
+
+
+.title--underline {
+	text-align: center;
+	position: relative;
+	margin-bottom: 13.1rem;
+
+	&::before {
+		display: none;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 15rem;
+		background: $color_accent no-repeat;
+		height: 0.4rem;
+		width: 12rem;
+		left: 50%;
+        transform: translate(-50%, -50%);
+	}
+}
+
+.reasons__wrapper {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+    row-gap: 4.6rem;
+}
+
+.reasons__item {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+
+	@include bp($point_4, min) {
+		max-width: 22rem;
+	}
+	@include bp($point_5) {
+		max-width: 16rem;
+	}
+}
+
+.reasons__image_w {
+	position: relative;
+	width: 100%;
+	border-radius: 50%;
+	background-color: $color_accent;
+	margin-bottom: 3.7rem;
+
+	@include bp($point_4, min) {
+		max-width: 14rem;
+		height: 14rem;
+	}
+	@include bp($point_5) {
+		max-width: 10.2rem;
+	    height: 10.2rem;
+	}
+}
+
+.reasons__image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+    
+    @include bp($point_5) {
+        transform: translate(-50%, -50%) scale(0.75, 0.75);
+    }
+    
+}
+
+.reasons__descr {
+	font-family: $font_2;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 3rem;
+	text-align: center;
+	color: $color_gray;
+    max-width: 17.5rem;
+}
