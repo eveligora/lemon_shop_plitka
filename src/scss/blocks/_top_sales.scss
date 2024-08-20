@@ -45,6 +45,16 @@
 	}
 }
 
+@include bp($point_4, min) {
+	.decor_bef::before {
+		@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem);
+	}
+
+	.decor_aft::after {
+		@include square_dots_aft(7.1rem, 7.1rem, -3.1rem, -3.1rem);
+	}
+}
+
 .top_sales__product_wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -66,16 +76,6 @@
 
 	&:hover {
 		box-shadow: 0 0.4rem 2rem 0 rgba(0, 0, 0, 0.25);
-	}
-
-	@include bp($point_4, min) {
-		&:first-child::before {
-			@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem);
-		}
-
-		&:last-child::after {
-			@include square_dots_aft(7.1rem, 7.1rem, -3.1rem, -3.1rem);
-		}
 	}
 }
 
