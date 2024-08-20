@@ -1,10 +1,22 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: $zindex_header;
+	background-color: $color_white;
+}
+
+// header top
+
 .header__top {
 	position: relative;
-	height: 4.6rem;
+	height: $header_top_height;
 	display: flex;
 	align-items: center;
 
 	color: $color_white;
+	transition: height $transition_dur ease-in-out;
 
 	&::before {
 		position: absolute;
@@ -19,6 +31,10 @@
 		height: 100%;
 
 		background-color: $color_accent;
+	}
+
+	.header.header--scroll & {
+		height: 0;
 	}
 }
 
@@ -39,13 +55,6 @@
 	&:focus {
 		text-decoration: underline;
 	}
-}
-
-.header_nav__link {
-	font-size: 1.5rem;
-	font-weight: 700;
-	color: inherit;
-	cursor: pointer;
 }
 
 .header__phone_icon_w {
@@ -73,10 +82,83 @@
 	@extend %contain_img;
 }
 
-.header__bottom {
-	height: 10.2rem;
-}
-
 .header__location_w {
 	margin-left: auto;
+}
+
+// header top ###
+
+// header bottom
+
+.header__bottom {
+	height: $header_bottom_height;
+	transition: height $transition_dur ease-in-out;
+
+	.header.header--scroll & {
+		height: 6rem;
+	}
+}
+
+.header_nav {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.header_logo_w {
+	display: flex;
+	align-items: center;
+	padding: 0 9rem;
+}
+
+.header_logo {
+	display: block;
+	height: 7rem;
+	width: 29rem;
+	transition: height $transition_dur ease-in-out;
+
+	.header.header--scroll & {
+		height: 4rem;
+	}
+}
+
+.header_logo__img {
+	@extend %contain_img;
+}
+
+.header_nav__in {
+	width: calc((100% - 47rem) / 2);
+	display: flex;
+	column-gap: 4rem;
+	justify-content: space-between;
+}
+
+.header_nav__item {
+	display: block;
+}
+
+.header_nav__link {
+	display: flex;
+	align-items: center;
+	height: 100%;
+
+	font-size: 2.2rem;
+	font-weight: 700;
+	color: inherit;
+	cursor: pointer;
+	font-family: $font_2;
+	text-decoration: none;
+	transition: color $transition_dur ease-in-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $color_hover;
+	}
+}
+
+// header bottom ###
+
+.header_dropdown {
+	display: none;
 }
