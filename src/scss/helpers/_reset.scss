@@ -136,11 +136,11 @@ q:after {
 :focus {
 	outline: 0;
 }
-input[type="text"],
+input[type='text'],
 textarea {
 	appearance: none;
 }
-input[type="text"]::-ms-clear,
+input[type='text']::-ms-clear,
 textarea::-ms-clear {
 	display: none;
 }
@@ -178,7 +178,7 @@ table {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {

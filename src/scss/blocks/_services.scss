@@ -76,16 +76,14 @@
 }
 .services_slider__w {
 	// margin-bottom: 4.6rem;
-	
-	
+
 	@include bp($point_2, min) {
 		padding: 5.8rem 0;
 	}
-	
+
 	@include bp($point_3) {
 		padding: 3.6rem 0 5.8rem;
 	}
-	
 }
 .services_slider__item {
 	display: flex;
@@ -132,8 +130,6 @@
 	display: block;
 	object-fit: contain;
 
-	
-	
 	@include bp($point_2, min) {
 		&::before {
 			content: '';
@@ -146,10 +142,6 @@
 			top: -3.2rem;
 		}
 	}
-	
-	
-	
-	
 }
 .services__img {
 	@extend %contain_img;
@@ -176,11 +168,10 @@
 	&:hover {
 		box-shadow: 1px 1px 24px 5px rgba(40, 189, 37, 0.91);
 	}
-	
+
 	@include bp($point_3) {
-	margin: 0 auto;
+		margin: 0 auto;
 	}
-	
 }
 .slider_pagination {
 	span {

@@ -20,4 +20,4 @@
 
 4.  Pretty your files:
 
-		gulp format
+    	gulp format

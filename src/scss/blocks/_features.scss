@@ -1,5 +1,5 @@
 .section--bg {
-    padding: 0;
+	padding: 0;
 }
 
 .features__container {
@@ -17,29 +17,28 @@
 .feature__item {
 	text-align: center;
 
-    h3 {
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 1.67;
-        color: $color_text;
-    }
-    
-    p {
-        font-family: $font_1;
-        font-size: 1.8rem;
-        line-height: 1.45;
-        color: #555;
-        margin: 0 5rem 5rem;
-    }
+	h3 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1.67;
+		color: $color_text;
+	}
 
-    &:nth-child(-n + 2) {
-        border-bottom: 1px solid #e1e1e1;
-    }
+	p {
+		font-family: $font_1;
+		font-size: 1.8rem;
+		line-height: 1.45;
+		color: #555;
+		margin: 0 5rem 5rem;
+	}
 
-    &:nth-child(2n) {
-        border-left: 1px solid #e1e1e1;
-    }
-   
+	&:nth-child(-n + 2) {
+		border-bottom: 1px solid #e1e1e1;
+	}
+
+	&:nth-child(2n) {
+		border-left: 1px solid #e1e1e1;
+	}
 }
 
 .feature__icon img {
@@ -53,9 +52,8 @@
 	background-color: #f0f0f0;
 	text-align: right;
 
-    img {
-        max-width: 100%;
-        @extend %cover_img;
-    }
+	img {
+		max-width: 100%;
+		@extend %cover_img;
+	}
 }
-
