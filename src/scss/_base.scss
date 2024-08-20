@@ -52,11 +52,11 @@ body {
 			padding: 0 10rem;
 		}
 
-		@include bp($point_3, max) {
+		@include bp($point_3) {
 			padding: 0 4rem;
 		}
-
-		@include bp($point_5, max) {
+		
+		@include bp($point_5) {
 			padding: 0rem;
 		}
 	}
@@ -110,5 +110,19 @@ body {
 			left: 50%;
 			top: 50%;
 		}
+	}
+}
+
+.section__title {
+	font-weight: 700;
+	text-align: left;
+	font-family: $font_2;
+	@include bp($point_4, min) {
+		font-size: 5rem;
+		line-height: 6.3rem;
+	}
+	@include bp($point_5, max) {
+		font-size: 2.8rem;
+		line-height: 3.2rem;
 	}
 }
