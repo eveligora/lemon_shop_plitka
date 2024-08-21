@@ -15,7 +15,7 @@
 	}
 }
 
-.info__block {
+.footer__block {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -36,7 +36,7 @@
 	}
 }
 
-.logo img {
+.footer__item--logo img {
 	max-width: 28rem;
 	height: 6.8rem;
 
@@ -56,7 +56,7 @@
 	}
 }
 
-.info__item {
+.footer__item {
 	text-align: center;
 	flex-basis: 18%;
 
@@ -73,7 +73,7 @@
 	}
 }
 
-.phones a {
+.footer__item--phones a {
 	font-family: $font_1;
 	font-size: 2rem;
 	font-weight: 400;
@@ -107,9 +107,9 @@
 	}
 }
 
-.phones,
-.address,
-.working__hours {
+.footer__item--phones,
+.footer__item--address,
+.footer__item--hours {
 	display: flex;
 	flex-direction: column;
 
@@ -153,7 +153,7 @@
 	}
 }
 
-.working__hours__info,
+.working__hours,
 .address__info {
 	width: 31rem;
 
@@ -183,7 +183,7 @@
 	}
 }
 
-.hours__info {
+.working__hours--info {
 	width: 20.8rem;
 
 	@include bp($point_3) {
