@@ -3,7 +3,7 @@ function updateBlocks() {
 		block.classList.remove('decor_aft', 'decor_bef');
 	});
 
-	const blocks = document.querySelectorAll('.top_sales__product_card.product_card');
+	const blocks = document.querySelectorAll('.product_card');
 
 	let topRightBlock = null;
 	let topRightPosition = { top: Infinity, left: -Infinity };
@@ -43,4 +43,4 @@ function updateBlocks() {
 }
 
 document.addEventListener('DOMContentLoaded', updateBlocks);
-window.addEventListener('resize', updateBlocks);
+
