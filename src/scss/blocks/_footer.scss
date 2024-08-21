@@ -2,7 +2,7 @@
 	width: 100%;
 	padding: 2rem 0;
 
-    @include bp($point_3) {
+	@include bp($point_3) {
 		padding: 1.5rem 0;
 	}
 
@@ -15,13 +15,13 @@
 	}
 }
 
-.info__block {
+.footer__block {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.2rem;
 
-    @include bp($point_3) {
+	@include bp($point_3) {
 		flex-direction: column;
 		align-items: flex-start;
 		padding: 1rem;
@@ -36,9 +36,9 @@
 	}
 }
 
-.logo img {
-    max-width: 28rem;
-    height: 6.8rem;
+.footer__item--logo img {
+	max-width: 28rem;
+	height: 6.8rem;
 
 	@include bp($point_3) {
 		max-width: 24rem;
@@ -56,11 +56,11 @@
 	}
 }
 
-.info__item {
+.footer__item {
 	text-align: center;
 	flex-basis: 18%;
 
-    @include bp($point_3) {
+	@include bp($point_3) {
 		margin-bottom: 2rem;
 	}
 
@@ -73,8 +73,8 @@
 	}
 }
 
-.phones a {
-	font-family: Roboto;
+.footer__item--phones a {
+	font-family: $font_1;
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 3rem;
@@ -91,30 +91,29 @@
 		text-decoration: underline;
 	}
 
-    @include bp($point_3) {
-        font-size: 2rem;
-        line-height: 2.6rem;
+	@include bp($point_3) {
+		font-size: 2rem;
+		line-height: 2.6rem;
 	}
 
 	@include bp($point_5) {
-        font-size: 1.5rem;
-        line-height: 2rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
 	}
 
 	@include bp($point_8) {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-    
+		font-size: 1.2rem;
+		line-height: 1.8rem;
 	}
 }
 
-.phones,
-.address,
-.working__hours {
+.footer__item--phones,
+.footer__item--address,
+.footer__item--hours {
 	display: flex;
 	flex-direction: column;
 
-	font-family: Lora;
+	font-family: $font_2;
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 3rem;
@@ -128,19 +127,19 @@
 		margin: 16px 0;
 	}
 
-    @include bp($point_3) {
-        font-size: 2.4rem;
-        line-height: 2.2rem;
+	@include bp($point_3) {
+		font-size: 2.4rem;
+		line-height: 2.2rem;
 	}
 
 	@include bp($point_5) {
 		font-size: 1.8rem;
 		line-height: 2rem;
 
-        span {
-            width: 8rem;
-            margin: 10px 0;
-        }
+		span {
+			width: 8rem;
+			margin: 10px 0;
+		}
 	}
 
 	@include bp($point_8) {
@@ -149,32 +148,32 @@
 
 		span {
 			width: 6rem;
-            margin: 8px 0;
+			margin: 8px 0;
 		}
-    }     
+	}
 }
 
-.working__hours__info,
+.working__hours,
 .address__info {
 	width: 31rem;
 
-	font-family: Roboto;
+	font-family: $font_1;
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 3rem;
 	text-align: left;
 	color: $color_text;
 
-    @include bp($point_3) {
-        width: 22rem;
-        font-size: 2rem;
-        line-height: 2.6rem;
+	@include bp($point_3) {
+		width: 22rem;
+		font-size: 2rem;
+		line-height: 2.6rem;
 	}
 
 	@include bp($point_5) {
-        width: 15rem;
-        font-size: 1.5rem;
-        line-height: 2rem;
+		width: 15rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
 	}
 
 	@include bp($point_8) {
@@ -184,23 +183,23 @@
 	}
 }
 
-.hours__info {
+.working__hours--info {
 	width: 20.8rem;
 
-    @include bp($point_3) {
-        width: 22rem;
-        font-size: 2rem;
-        line-height: 2.6rem;
+	@include bp($point_3) {
+		width: 22rem;
+		font-size: 2rem;
+		line-height: 2.6rem;
 	}
 
 	@include bp($point_5) {
-        width: 16rem;
-        font-size: 1.5rem;
-        line-height: 2rem;
+		width: 16rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
 	}
 
 	@include bp($point_8) {
-        width: 13rem;
+		width: 13rem;
 		font-size: 1.2rem;
 		line-height: 1.8rem;
 	}
