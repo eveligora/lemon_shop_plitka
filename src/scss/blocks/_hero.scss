@@ -168,7 +168,6 @@
 }
 
 .hero__catalog_link {
-	@extend %btn_main;
 	@extend %btn_primary;
 
 	@include bp($point_4, min) {
