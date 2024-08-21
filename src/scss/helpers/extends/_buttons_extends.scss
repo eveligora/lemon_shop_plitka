@@ -49,23 +49,14 @@
 
 //size extends
 %btn_size {
-	min-width: 28.2rem;
+	max-width: 28.2rem;
 	height: 8.8rem;
 	font-size: 2rem;
 	border-radius: 4.9rem;
 	font-weight: 700;
 	line-height: 3rem;
 	font-family: $font_1;
-
-	@include bp($point_4, min) {
-		padding: 0 6rem;
-	}
-	@include bp($point_5) {
-		padding: 0 5rem;
-	}
-	@include bp($point_8) {
-		padding: 0 3rem;
-	}
+	padding: 0 7rem;
 }
 
 // .btn_white_1 {
