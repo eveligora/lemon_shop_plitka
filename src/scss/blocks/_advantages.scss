@@ -152,12 +152,8 @@
 }
 
 .advantages__btn {
-	@extend %btn_main;
-
-	&:hover {
-		background-color: $color_accent;
-		color: $color_white;
-	}
+	@extend %transp_btn;
+	@extend %btn_size;
 
 	@include bp($point_4, min) {
 		padding: 2rem 4.3rem;
