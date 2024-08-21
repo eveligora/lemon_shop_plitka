@@ -70,7 +70,7 @@ body {
 }
 
 //Title
-.news_title_w {
+.section_title_w {
 	display: flex;
 	@include bp($point_2, min) {
 		margin-bottom: 10rem;
@@ -80,8 +80,8 @@ body {
 		margin-bottom: 3.5rem;
 		column-gap: 2.5rem;
 	}
-
-	h2 {
+}
+	.section__title {
 		font-weight: 700;
 		text-align: left;
 		font-family: $font_2;
@@ -94,7 +94,7 @@ body {
 			line-height: 3.2rem;
 		}
 	}
-	span {
+	.section__border {
 		position: relative;
 		display: block;
 		width: 12rem;
@@ -111,18 +111,3 @@ body {
 			top: 50%;
 		}
 	}
-}
-
-.section__title {
-	font-weight: 700;
-	text-align: left;
-	font-family: $font_2;
-	@include bp($point_4, min) {
-		font-size: 5rem;
-		line-height: 6.3rem;
-	}
-	@include bp($point_5, max) {
-		font-size: 2.8rem;
-		line-height: 3.2rem;
-	}
-}
