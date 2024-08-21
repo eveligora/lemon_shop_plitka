@@ -123,16 +123,6 @@
 	text-align: left;
 	margin-bottom: 0.5rem;
 
-	&.color {
-		color: $color_text;
-		font-weight: 600;
-	}
-
-	&.color__text {
-		color: $color_gray_text;
-		font-weight: 400;
-	}
-
 	@include bp($point_3) {
 		font-size: 1.6rem;
 		line-height: 3rem;
@@ -149,6 +139,16 @@
 		font-size: 1.4rem;
 		line-height: 2.6rem;
 	}
+}
+
+.advantages__descr--color {
+	color: $color_text;
+	font-weight: 600;
+}
+
+.advantages__descr--color__text {
+	color: $color_gray_text;
+	font-weight: 400;
 }
 
 .advantages__btn {
