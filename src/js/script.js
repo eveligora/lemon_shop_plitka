@@ -12,16 +12,11 @@ function scrollFunction() {
 	}
 }
 
-// var swiper = new Swiper('.services_slider', {
-// 	pagination: {
-// 		el: '.slider_pagination',
-// 	},
-// });
 
-var swiper = new Swiper(".services_slider", {
+ new Swiper(".services_slider", {
 	spaceBetween: 30,
 	pagination: {
-	  el: ".slider_pagination",
+	  el: ".services_slider__pagination",
 	  clickable: true,
 	},
   });
