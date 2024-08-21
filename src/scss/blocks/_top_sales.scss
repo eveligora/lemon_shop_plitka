@@ -43,11 +43,11 @@
 	}
 }
 
-.product_card__wrapper{
+.product_card__wrapper {
 	padding-right: 2rem;
 }
 
-.top_sales__product_wrapper{
+.top_sales__product_wrapper {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -60,21 +60,18 @@
 	position: relative;
 	row-gap: 2rem;
 	margin-right: -2rem;
-	
-
-	
 
 	@include bp($point_4, min) {
 		&::before {
 			@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem);
 		}
-	
+
 		&::after {
 			@include square_dots_aft(7.1rem, 7.1rem, -3.1rem, -3.1rem);
 		}
 	}
 }
-.product_card__wrapper{
+.product_card__wrapper {
 	flex: 1 0 25%;
 	min-width: 34rem;
 }
