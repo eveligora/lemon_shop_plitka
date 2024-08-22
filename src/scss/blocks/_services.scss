@@ -164,16 +164,26 @@
 	color: $color_gray;
 }
 .services__info_btn {
-	@extend%btn_services;
-	&:hover {
-		box-shadow: 1px 1px 24px 5px rgba(40, 189, 37, 0.91);
+@extend%btn_services;
+transition: all .5s ease-in-out;
+	&:hover{
+		box-shadow: 2px 3px 35px -2px rgba(40,189,37,0.75);
 	}
+	&::after{
+		content: "";
 
-	@include bp($point_3) {
-		margin: 0 auto;
+		background-image: url(../imgs/services/arrow.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 1.8rem;
+		height: 1.6rem;
+		margin-left: 1rem;
+		
+		
 	}
 }
-.slider_pagination {
+.services_slider__pagination {
 	span {
 		background-color: $color_accent;
 		width: 1.5rem;

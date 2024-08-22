@@ -1,0 +1,150 @@
+.transport__in {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8rem;
+}
+.transport__row {
+	width: 100%;
+}
+.section_title_w {
+	margin-bottom: 0;
+    span{
+        margin: 0;
+    }
+}
+.transport_list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 6rem;
+}
+.transport__item {
+	background-color: $color_white;
+	box-shadow: 0px 4px 20px 0px #0000001a;
+	display: flex;
+	align-items: center;
+
+	@include bp($point_2, min) {
+		justify-content: space-between;
+		column-gap: 3rem;
+		padding: 6rem 4rem 6rem 10rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 5rem;
+		padding: 4rem 1.6rem;
+	}
+}
+.transport__item_coll {
+	&.transport__item_coll.transport__item_coll--one {
+		@include bp($point_2, min) {
+			width: 56rem;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	&.transport__item_coll.transport__item_coll--two {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include bp($point_2, min) {
+			width: 62.2rem;
+		}
+
+		@include bp($point_3) {
+			width: 100%;
+			order: -1;
+		}
+	}
+}
+.transport__item_title {
+	font-family: $font_2;
+	font-size: 2.6rem;
+	font-weight: 700;
+	line-height: 2.6rem;
+	color: $color_text;
+	margin-bottom: 3.8rem;
+}
+.transport__item_descr {
+	font-size: 2rem;
+	line-height: 3rem;
+	color: $color_gray;
+	margin-bottom: 3rem;
+}
+.transport__item_subtitle {
+	font-size: 2rem;
+	line-height: 3rem;
+	color: $color-text_1;
+	margin-bottom: 5.8rem;
+}
+.transport__order_w {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	@include bp($point_2, min) {
+		column-gap: 8.6rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		row-gap: 3rem;
+	}
+}
+.transport__price_w {
+	display: flex;
+	flex-direction: column;
+}
+.transport__price {
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 3rem;
+	color: $color-text_1;
+	margin-bottom: 0.6rem;
+}
+.transport__price_descr {
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 3rem;
+	color: $color_gray;
+}
+.transport__order_btn {
+	@extend%green_btn;
+	@extend%btn_size;
+}
+.item__img_bg {
+	background-color: $bg_gray;
+	position: relative;
+
+	@include bp($point_2, min) {
+		width: 40rem;
+		height: 40rem;
+	}
+
+	@include bp($point_3) {
+		width: 20rem;
+		height: 20rem;
+	}
+}
+.item__img_w {
+	display: block;
+	object-fit: contain;
+	position: absolute;
+
+	@include bp($point_2, min) {
+		min-width: 62.2rem;
+		min-height: 39.4rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+		height: 100%;
+	}
+}
+.item__img {
+	@extend%contain_img;
+}
