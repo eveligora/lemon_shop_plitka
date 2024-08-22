@@ -10,7 +10,7 @@
 }
 
 //color extends
-%transp_btn {
+%btn_transp {
 	@include st_btn;
 	border: 2px solid $color_accent;
 	color: $color_text;
@@ -28,22 +28,8 @@
 	}
 }
 
-// %btn_main {
-// 	@include st_btn;
-// 	border-radius: 4.9rem;
-// 	border: 2px solid $color_accent;
-// 	font-family: $font_1;
-// 	font-size: 2rem;
-// 	font-weight: 700;
-// 	line-height: 3rem;
-// 	color: $color_text;
-// 	text-decoration: none;
-// 	text-transform: uppercase;
-// 	transition: all 0.1s ease-in-out;
-// 	letter-spacing: 7.5%;
-// }
 
-%green_btn {
+%btn_green {
 	@include st_btn;
 	border: 2px solid $color_accent;
 	background-color: $color_accent;
@@ -73,10 +59,7 @@
 	padding: 0 7rem;
 }
 
-// .btn_white_1 {
-// 	@extend %white_btn_1;
-// 	@extend %btn_size_1;
-// }
+
 
 %btn_news {
 	@include st_btn;
@@ -89,20 +72,3 @@
 	text-decoration: none;
 }
 
-// %btn_primary {
-// 	background-color: $color_accent;
-// 	color: $color_white;
-// 	letter-spacing: 0.12em;
-// }
-%btn_services {
-	@include st_btn;
-	max-width: 28.2rem;
-	height: 8.8rem;
-	border-radius: 5rem;
-	background-color: $color_accent;
-	color: $color_white;
-	padding: 0 5.8rem;
-	font-size: 2rem;
-	font-weight: 700;
-	line-height: 8.8rem;
-}

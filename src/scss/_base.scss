@@ -125,12 +125,12 @@ body {
 	}
 }
 
-.green_btn {
-	@extend %green_btn;
+.btn_green {
+	@extend %btn_green;
 	@extend %btn_size;
 	position: relative;
 
-	&.green_btn--arrow::after{
+	&.btn_green--arrow::after{
 		position: absolute;
 		content: '';
 		background: url('../imgs/mod_arrow.svg') center/100% no-repeat;
@@ -141,17 +141,17 @@ body {
 		transition: all $transition_dur ease-in-out;
 	}
 
-	&.green_btn--arrow:hover::after{
+	&.btn_green--arrow:hover::after{
 		filter: invert(100%);
 	}	
 
-	&.green_btn--arrow{
+	&.btn_green--arrow{
 		padding: 0 9rem 0 7rem;
 	}
 }
 
-.transp_btn {
-	@extend %transp_btn;
+.btn_transp {
+	@extend %btn_transp;
 	@extend %btn_size;
 }
 
