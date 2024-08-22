@@ -101,7 +101,7 @@ body {
 		position: relative;
 		display: block;
 		width: 12rem;
-	
+
 		&::before {
 			position: absolute;
 			content: '';
@@ -114,7 +114,7 @@ body {
 			top: 50%;
 		}
 	}
-	
+
 	@include bp($point_4, min) {
 		font-size: 5rem;
 		line-height: 6.3rem;
@@ -124,7 +124,6 @@ body {
 		line-height: 3.2rem;
 	}
 }
-
 
 // .section__border {
 // 	position: relative;
