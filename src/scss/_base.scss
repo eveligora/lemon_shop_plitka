@@ -133,7 +133,7 @@ body {
 	&.green_btn--arrow::after{
 		position: absolute;
 		content: '';
-		background: url('../imgs/mod_arrow.svg') no-repeat;
+		background: url('../imgs/mod_arrow.svg') center/100% no-repeat;
 		top: 3.4rem;
 		right: 7rem;
 		width: 1.8rem;
