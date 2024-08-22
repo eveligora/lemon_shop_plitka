@@ -128,6 +128,26 @@ body {
 .green_btn {
 	@extend %green_btn;
 	@extend %btn_size;
+	position: relative;
+
+	&.green_btn--arrow::after{
+		position: absolute;
+		content: '';
+		background: url('../imgs/mod_arrow.svg') no-repeat;
+		top: 3.4rem;
+		right: 7rem;
+		width: 1.8rem;
+		height: 1.5rem;
+		transition: all $transition_dur ease-in-out;
+	}
+
+	&.green_btn--arrow:hover::after{
+		filter: invert(100%);
+	}	
+
+	&.green_btn--arrow{
+		padding: 0 9rem 0 7rem;
+	}
 }
 
 .transp_btn {
