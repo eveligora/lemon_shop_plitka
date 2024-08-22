@@ -20,6 +20,10 @@
 	color: $color_black;
 	position: relative;
 
+	@include bp($point_5) {
+		font-size: 2.8rem;
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -43,28 +47,48 @@
 	}
 }
 
-@include bp($point_4, min) {
-	.decor_bef::before {
-		@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem);
-	}
+.top_sales__product_wrapper {
+	display: flex;
+	margin-right: -2rem;
+}
 
-	.decor_aft::after {
-		@include square_dots_aft(7.1rem, 7.1rem, -3.1rem, -3.1rem);
+.top_sales__product_wrapper_decor {
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	position: relative;
+	width: 100%;
+	row-gap: 2rem;
+}
+
+.decor {
+	@include bp($point_4, min) {
+		&::before {
+			@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem);
+		}
+
+		&::after {
+			@include square_dots_aft(7.1rem, 7.1rem, -3.1rem, -3.1rem);
+		}
 	}
 }
 
-.top_sales__product_wrapper {
+.product_card__wrapper {
+	flex: 1 1 25%;
 	display: flex;
-	flex-wrap: wrap;
+	width: 34rem;
+	padding-right: 2rem;
 	justify-content: center;
-	gap: 2rem;
-	margin: 0 auto;
 }
 
 .product_card {
-	background-color: $color_white;
-	max-width: 34rem;
+	flex: 1 1 100%;
+	padding-right: 2rem;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	background-color: $color_white;
 	padding: 3.4rem 3.5rem 3.6rem 3.5rem;
 	border: 0.1rem solid $bg_gray;
 	box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
@@ -84,18 +108,14 @@
 	height: 25.3rem;
 	margin-bottom: 1.8rem;
 
-	& img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+	& .imgs {
+		@extend %cover_img;
 	}
 }
 
 .product_card__title {
 	font-family: $font_2;
+	flex-grow: 1;
 	font-weight: 700;
 	font-size: 2.6rem;
 	line-height: 2.6rem;
@@ -142,6 +162,7 @@
 .product_card__btn {
 	@extend %transp_btn;
 	@extend %btn_size;
+	align-self: center;
 }
 
 .product_card__inner {
