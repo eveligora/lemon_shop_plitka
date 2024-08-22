@@ -45,6 +45,17 @@ body {
 	width: 100%;
 	margin: 0 auto;
 
+	@include bp($point_5) {
+		.container {
+			padding: 0 2rem;
+		}
+	}
+	@include bp($point_5) {
+		.section {
+			padding: 5rem 0;
+		}
+	}
+
 	&.container--wide {
 		max-width: 100%;
 
