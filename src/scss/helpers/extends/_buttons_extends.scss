@@ -28,12 +28,27 @@
 		box-shadow: 0 0.4rem 2rem 0 rgba($color_accent, 0.25);
 	}
 }
+
+// %btn_main {
+// 	@include st_btn;
+// 	border-radius: 4.9rem;
+// 	border: 2px solid $color_accent;
+// 	font-family: $font_1;
+// 	font-size: 2rem;
+// 	font-weight: 700;
+// 	line-height: 3rem;
+// 	color: $color_text;
+// 	text-decoration: none;
+// 	text-transform: uppercase;
+// 	transition: all 0.1s ease-in-out;
+// 	letter-spacing: 7.5%;
+// }
+
 %green_btn {
 	@include st_btn;
 	border: 2px solid $color_accent;
 	background-color: $color_accent;
 	color: $color_white;
-	text-decoration: none;
 	text-transform: uppercase;
 	transition: all $transition_dur ease-in-out;
 	letter-spacing: 0.075em;
@@ -75,11 +90,11 @@
 	text-decoration: none;
 }
 
-%btn_primary {
-	background-color: $color_accent;
-	color: $color_white;
-	letter-spacing: 0.12em;
-}
+// %btn_primary {
+// 	background-color: $color_accent;
+// 	color: $color_white;
+// 	letter-spacing: 0.12em;
+// }
 %btn_services {
 	@include st_btn;
 	max-width: 28.2rem;
