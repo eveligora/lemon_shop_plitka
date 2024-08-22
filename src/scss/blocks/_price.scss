@@ -1,0 +1,41 @@
+section{
+    &.section--price{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background: url(../../imgs/price/hero_price.png);
+     background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 44.4rem;
+
+        .container.container--price {
+            width: 100%;
+            height: 100%;
+
+    .title_w {
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .title_price{
+            font-weight: 700;
+            text-align: left;
+            font-family: $font_2;
+            color: $color_black;
+            
+            @include bp($point_4, min) {
+                font-size: 5rem;
+                line-height: 6.3rem;
+            }
+            @include bp($point_5, max) {
+                font-size: 2.8rem;
+                line-height: 3.2rem;
+            }
+        }
+    }
+    }
+}
+}
