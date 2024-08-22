@@ -151,22 +151,3 @@
 	font-weight: 400;
 }
 
-.advantages__btn {
-	@extend %transp_btn;
-	@extend %btn_size;
-
-	@include bp($point_4, min) {
-		padding: 2rem 4.3rem;
-		margin-top: 1.8rem;
-	}
-
-	@include bp($point_5) {
-		padding: 1.8rem 3.5rem;
-		margin-top: 1.6rem;
-	}
-
-	@include bp($point_8) {
-		padding: 1.5rem 3rem;
-		margin-top: 1.2rem;
-	}
-}

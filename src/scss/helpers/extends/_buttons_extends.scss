@@ -55,7 +55,7 @@
 	&:active,
 	&:hover {
 		transition: all $transition_dur ease-in-out;
-		background-color: transparent;
+		background-color: $color_white;
 		color: $color_text;
 		box-shadow: 0 0.4rem 2rem 0 rgba($color_accent, 0.25);
 	}
@@ -63,7 +63,7 @@
 
 //size extends
 %btn_size {
-	max-width: 28.2rem;
+	min-width: 28.2rem;
 	height: 8.8rem;
 	font-size: 2rem;
 	border-radius: 4.9rem;
