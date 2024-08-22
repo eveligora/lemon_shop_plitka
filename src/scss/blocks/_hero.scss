@@ -14,17 +14,15 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		border: 1px solid $color_white;
-		background-color: $color_white;
-		box-shadow: 0 0 3rem 4rem $color_white;
+		border: 1px solid $bg_gray;
+		background-color: $bg_gray;
+		box-shadow: 0 0 3rem 4rem $bg_gray;
 	}
 
 	button {
-		width: 5.4rem;
 		height: 7rem;
-		background-color: rgba(255 255 255 / 0.5);
 		cursor: pointer;
-		transition: 0.15s;
+		transition: $transition_dur;
 
 		&::after {
 			display: none;
@@ -43,14 +41,15 @@
 			background-color: rgba(255 255 255 / 0.25);
 		}
 
+		@include bp($point_1 + 400, min) {
+			width: 5.4rem;
+			background-color: rgba(255 255 255 / 0.5);
+		}
+
 		@include bp($point_5, max) {
 			width: 3rem;
 			background-color: transparent;
 		}
-	}
-
-	.swiper-slide {
-		margin: 0 -1px;
 	}
 
 	.swiper-button-prev,
@@ -74,11 +73,11 @@
 		padding-bottom: 2.6rem;
 	}
 
-	@include bp($point_5, max) {
+	@media screen and (max-width: $point_5) and (min-width: ($point_6 + 95)) {
 		padding: 0 7rem 9rem 8rem;
 	}
 
-	@include bp($point_6 + 95, max) {
+	@include bp($point_6 + 94.98, max) {
 		padding: 0 0 9rem 0;
 	}
 }
@@ -158,32 +157,43 @@
 	width: 100%;
 	z-index: 1;
 
-	@include bp($point_5, max) {
+	@media screen and (max-width: $point_5) and (min-width: ($point_6 + 95)) {
 		padding: 0 7rem 0 8rem;
 	}
 
-	@include bp($point_6 + 95, max) {
+	@include bp($point_6 + 94.98, max) {
 		padding: 0;
 	}
 }
 
 .hero__catalog_link {
-	@extend %btn_primary;
+	@extend %green_btn;
+	border-radius: 4.9rem;
+	font-family: $font_1;
+	font-size: 2rem;
+	font-weight: 700;
 
 	@include bp($point_4, min) {
 		width: 28.2rem;
+		height: 8.8rem;
 		line-height: 8.8rem;
 	}
 
-	@include bp($point_5, max) {
+	@media screen and (max-width: $point_5) and (min-width: ($point_6 + 95)) {
 		width: 33.5rem;
+		height: 7.8rem;
 		line-height: 7.8rem;
 		margin: auto;
+		padding: 0;
 	}
 
-	@include bp($point_6 + 95, max) {
+	@include bp($point_6 + 94.98, max) {
 		display: block;
 		max-width: 100%;
-		margin: 0 auto;
+		width: 33.5rem;
+		height: 7.8rem;
+		line-height: 7.8rem;
+		margin: auto;
+		padding: 0;
 	}
 }
