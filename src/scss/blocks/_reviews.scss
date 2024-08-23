@@ -1,3 +1,29 @@
+@include bp($point_1, min) {
+	.container--review {
+		padding: 12rem 2rem;
+		position: relative;
+	}
+}
+
+.reviews__hero_w {
+	position: absolute;
+	bottom: 0;
+	right: -16rem;
+	width: 55.9rem;
+	height: 94.2rem;
+
+	& img {
+		@extend %contain_img;
+	}
+
+	@include bp($point_1, min) {
+		display: block;
+	}
+	@include bp($point_1) {
+		display: none;
+	}
+}
+
 .reviews__descr {
 	max-width: 75rem;
 	width: 100%;
@@ -8,39 +34,100 @@
 		line-height: 3rem;
 		text-align: left;
 		color: $color_gray;
-        margin-bottom: 7.2rem;
+		margin-bottom: 7.2rem;
 	}
 }
 
-@include bp($point_4, min) {
+.swiper.swiper_review {
+	
+	max-width: 84.8rem;
+	width: 100%;
+	padding-top: 3rem;
+	margin-top: -3rem;
+	
+
+	@include bp($point_1) {
+		margin-bottom: 3.4rem;
+	}
+
+	
+	@include bp($point_5) {
+		height: calc(70rem * 2);
+	}
+	
+}
+
+
+
+.reviews__wrapper {
+	flex-direction: column;
+	position: relative;
+	display: flex;
+}
+
+@include bp($point_1, min) {
 	.reviews__wrapper {
 		padding-left: 16.3rem;
 	}
 }
-
-@include bp($point_5) {
+@include bp($point_1) {
 	.reviews__wrapper {
-		padding-left: 11.1rem;
+		align-items: center;
 	}
 }
 
-.swiper_review {
-	max-width: 84.8rem;
-	width: 100%;
+.reviews__swiper_wrapper{
+	display: flex;
+	
 }
 
-.swiper-slide__review {
+
+.swiper-slide.swiper-slide__review {
+	width: 100%;
+	flex-direction: column;
 	background-color: $color_white;
-	padding: 6.3rem 2rem 4.6rem 4.6rem;
+	padding: 6.3rem 4.6rem 4.6rem 4.6rem;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: -2.5rem;
+		left: 5rem;
+		width: 6.2rem;
+		height: 5.5rem;
+		background: url('../../imgs/reviews/rev_dec.svg') center/40% space;
+	}
+
+	& span {
+		color: $color_text;
+	}
+	
+	
+	@include bp($point_5) {
+		min-height: 57rem;
+	}
+	
 }
 
 .review__text {
-	font-size: 2.2rem;
+	
 	font-weight: 400;
 	line-height: 3.4rem;
 	text-align: left;
 	color: $color_gray;
 	margin-bottom: 2.2rem;
+
+	
+	@include bp($point_4, min) {
+		font-size: 2.2rem;
+	}
+	
+	
+	@include bp($point_5) {
+		font-size: 2rem;
+	}
+	
 }
 
 .review__author {
@@ -50,4 +137,61 @@
 	font-weight: 500;
 	line-height: 3.4rem;
 	text-align: left;
+}
+
+.reviews__btn_in {
+	top: 50%;
+	left: 4rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	@include bp($point_1, min) {
+		position: absolute;
+		max-width: 100rem;
+	}
+
+	@include bp($point_1) {
+		position: static;
+		max-width: 75rem;
+		padding-bottom: 4.2rem;
+	}
+}
+
+.reviews__btn_left,
+.reviews__btn_right {
+	width: 6.2rem;
+	height: 6.2rem;
+	border-radius: 50%;
+	background-color: $color_white;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid $color_white;
+	transition: all 0.3s ease-in-out;
+	z-index: 100;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 2.6rem;
+		height: 1.8rem;
+		background: url('../../imgs/reviews/arrow.svg') center/100% no-repeat;
+	}
+
+	&:hover {
+		border: 1px solid $color_accent;
+		box-shadow: 0 0 1rem $color_accent;
+	}
+
+	&:active {
+		transition: all 0.01s ease-in-out;
+		box-shadow: 0 0 3rem $color_accent, inset 0 0 1rem 0.1rem rgba($color_text, 0.5);
+	}
+}
+
+.reviews__btn_right::before {
+	transform: translate(-50%, -50%) rotate(-180deg);
 }
