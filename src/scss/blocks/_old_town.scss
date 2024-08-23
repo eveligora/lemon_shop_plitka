@@ -304,18 +304,20 @@ old_town__big_picture {
 
 	& > * {
 		flex: 1;
+		max-width: 28.8rem;
+		min-width: unset;
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
 }
 
 .old_town__order {
-	@extend %green_btn;
+	@extend %btn_green;
 	@extend %btn_size;
 }
 
 .old_town__price_list {
-	@extend %transp_btn;
+	@extend %btn_transp;
 	@extend %btn_size;
 }
 

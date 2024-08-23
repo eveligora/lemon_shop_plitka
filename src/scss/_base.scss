@@ -13,6 +13,10 @@ body {
 	scroll-behavior: smooth;
 }
 
+body {
+	background-color: $bg_gray;
+}
+
 .wrapper {
 	padding-top: $header_height;
 	width: 100%;
@@ -127,6 +131,36 @@ body {
 		font-size: 2.8rem;
 		line-height: 3.2rem;
 	}
+}
+
+.btn_green {
+	@extend %btn_green;
+	@extend %btn_size;
+	position: relative;
+
+	&.btn_green--arrow::after {
+		position: absolute;
+		content: '';
+		background: url('../imgs/mod_arrow.svg') center/100% no-repeat;
+		top: 3.4rem;
+		right: 7rem;
+		width: 1.8rem;
+		height: 1.5rem;
+		transition: all $transition_dur ease-in-out;
+	}
+
+	&.btn_green--arrow:hover::after {
+		filter: invert(100%);
+	}
+
+	&.btn_green--arrow {
+		padding: 0 9rem 0 7rem;
+	}
+}
+
+.btn_transp {
+	@extend %btn_transp;
+	@extend %btn_size;
 }
 
 // .section__border {
