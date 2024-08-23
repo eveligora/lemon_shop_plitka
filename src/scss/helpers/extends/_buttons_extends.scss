@@ -28,7 +28,6 @@
 	}
 }
 
-
 %btn_green {
 	@include st_btn;
 	border: 2px solid $color_accent;
@@ -59,8 +58,6 @@
 	padding: 0 7rem;
 }
 
-
-
 %btn_news {
 	@include st_btn;
 	font-size: 2rem;
@@ -72,3 +69,30 @@
 	text-decoration: none;
 }
 
+%btn_description {
+	@include st_btn;
+
+	border-radius: 5.2rem;
+	background-color: transparent;
+	color: $color_text;
+	padding: 0 3rem;
+	font-family: $font_2;
+	font-weight: 700;
+	line-height: 1;
+	text-transform: capitalize;
+
+	&.active {
+		background-color: $color_gray;
+		color: $color_white;
+	}
+
+	@include bp($point_4, min) {
+		height: 6.1rem;
+		font-size: 3rem;
+	}
+
+	@include bp($point_5, max) {
+		height: 5rem;
+		font-size: 2.4rem;
+	}
+}

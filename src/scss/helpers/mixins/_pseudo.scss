@@ -30,3 +30,12 @@
 	transform: translateY(-50%);
 	background: $color;
 }
+
+@mixin section_title_after_bottom($width, $distance, $height: 4px) {
+	content: '';
+	display: block;
+	width: $width;
+	height: $height;
+	margin-top: $distance;
+	background-color: $color_accent;
+}
