@@ -12,10 +12,12 @@ function scrollFunction() {
 	}
 }
 
-new Swiper(".services_slider", {
-	spaceBetween: 30,
-	pagination: {
-	  el: ".services_slider__pagination",
-	  clickable: true,
-	},
-  });
+if (window.location.pathname === '/') {
+	new Swiper('.services_slider', {
+		spaceBetween: 30,
+		pagination: {
+			el: '.services_slider__pagination',
+			clickable: true,
+		},
+	});
+}

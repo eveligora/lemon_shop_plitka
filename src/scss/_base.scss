@@ -46,14 +46,7 @@ body {
 	margin: 0 auto;
 
 	@include bp($point_5) {
-		.container {
-			padding: 0 2rem;
-		}
-	}
-	@include bp($point_5) {
-		.section {
-			padding: 5rem 0;
-		}
+		padding: 0 2rem;
 	}
 
 	&.container--wide {
@@ -75,6 +68,9 @@ body {
 
 //section__title
 .section__title {
+	position: relative;
+	display: block;
+
 	font-family: $font_2;
 	font-weight: 700;
 	color: $color_text;
@@ -86,7 +82,58 @@ body {
 		@include bp($point_5) {
 			padding-left: 12.2rem;
 		}
-	}	
+	}
+
+	//section__decor
+	&.section__title--decor_left {
+		&::before {
+			position: absolute;
+			content: '';
+			width: 12rem;
+			height: 0.4rem;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $color_accent;
+
+			@include bp($point_5) {
+				width: 8rem;
+			}
+		}
+	}
+
+	&.section__title--decor_bottom {
+		&::before {
+			position: absolute;
+			content: '';
+			width: 12rem;
+			height: 0.4rem;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			bottom: -2rem;
+			background-color: $color_accent;
+
+			@include bp($point_5) {
+				width: 8rem;
+			}
+		}
+	}
+
+	&.section__title--decor_bottom_left {
+		&::before {
+			position: absolute;
+			content: '';
+			width: 12rem;
+			height: 0.4rem;
+			left: 0;
+			bottom: -2rem;
+			background-color: $color_accent;
+
+			@include bp($point_5) {
+				width: 8rem;
+			}
+		}
+	}
 
 	@include bp($point_4, min) {
 		font-size: 5rem;
@@ -99,89 +146,29 @@ body {
 	}
 }
 
-//section__decor
-.section__title--decor_left {
-	position: relative;
-	display: block;
-
-	&::before {
-		position: absolute;
-		content: '';
-		width: 12rem;
-		height: 0.4rem;
-		left: 0;
-		top: 50%;
-		transform: translateY(-50%); 
-		background-color: $color_accent;
-
-		@include bp($point_5) {
-			width: 8rem;
-		}
-	}
-}
-
-.section__title--decor_bottom {
-	position: relative;
-	display: block;
-	
-    &::before {
-        position: absolute;
-        content: '';
-        width: 12rem; 
-        height: 0.4rem; 
-		transform: translate(-50%, -50%);
-		left: 50%;
-		bottom: -2rem;
-        background-color: $color_accent; 
-
-		@include bp($point_5) {
-			width: 8rem;
-		}
-    }
-}
-
-.section__title--decor_bottom__left {
-	position: relative;
-	display: block;
-	
-    &::before {
-        position: absolute;
-        content: '';
-        width: 12rem; 
-        height: 0.4rem; 
-		left: 0;
-		bottom: -2rem;
-        background-color: $color_accent; 
-
-		@include bp($point_5) {
-			width: 8rem;
-		}
-    }
-}
-
 //button
 .btn_green {
 	@extend %btn_green;
 	@extend %btn_size;
 	position: relative;
 
-	&.btn_green--arrow::after{
-		position: absolute;
-		content: '';
-		background: url('../imgs/mod_arrow.svg') center/100% no-repeat;
-		top: 3.4rem;
-		right: 7rem;
-		width: 1.8rem;
-		height: 1.5rem;
-		transition: all $transition_dur ease-in-out;
-	}
-
-	&.btn_green--arrow:hover::after{
-		filter: invert(100%);
-	}	
-
-	&.btn_green--arrow{
+	&.btn_green--arrow {
 		padding: 0 9rem 0 7rem;
+
+		&:hover::after {
+			filter: invert(100%);
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			background: url('../imgs/mod_arrow.svg') center/100% no-repeat;
+			top: 3.4rem;
+			right: 7rem;
+			width: 1.8rem;
+			height: 1.5rem;
+			transition: all $transition_dur ease-in-out;
+		}
 	}
 }
 
@@ -189,16 +176,3 @@ body {
 	@extend %btn_transp;
 	@extend %btn_size;
 }
-
-// 	&::before {
-// 		position: absolute;
-// 		content: '';
-// 		background-color: $color_accent;
-// 		max-width: 12rem;
-// 		width: 100%;
-// 		height: 0.4rem;
-// 		transform: translate(-50%, -50%);
-// 		left: 50%;
-// 		top: 50%;
-// 	}
-// }
