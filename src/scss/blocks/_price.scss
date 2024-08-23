@@ -40,6 +40,9 @@ section{
 }
 }
 
+.section_title_w{
+    margin-bottom: 7.6rem;
+}
 
 .table_price_w{
     max-width: 142rem;
@@ -52,6 +55,7 @@ section{
         width: 100%;
         padding: 0 5rem;
         background-color: $color_table_row;
+        cursor: pointer;
 
 
         .price_name__head{
@@ -92,7 +96,18 @@ text-align: left;
 
 .table_price1__data{
     width: 100%;
+
+    visibility: hidden;
+    pointer-events: none;
+    height: 0;
+
+    &.active{
+        visibility: visible;
+        pointer-events: auto;
+        height: auto;
+    }
 }
+
 
 thead{
     font-family: $font_1;
@@ -110,8 +125,11 @@ thead{
     }
 
     tbody{
-        height: 8.7rem;
+        // height: 8.7rem;
         font-family: $font_1;
+        tr{
+            height: 8.7rem;
+        }
 
         td{
         font-size: 2.4rem;
