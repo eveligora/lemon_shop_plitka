@@ -39,7 +39,7 @@
 }
 
 .swiper.swiper_review {
-	max-height: 100vh;
+	
 	max-width: 84.8rem;
 	width: 100%;
 	padding-top: 3rem;
@@ -49,7 +49,15 @@
 	@include bp($point_1) {
 		margin-bottom: 3.4rem;
 	}
+
+	
+	@include bp($point_5) {
+		height: calc(70rem * 2);
+	}
+	
 }
+
+
 
 .reviews__wrapper {
 	flex-direction: column;
@@ -68,11 +76,15 @@
 	}
 }
 
-.swiper-slide.swiper-slide__review {
-	max-height: 100rem;
+.reviews__swiper_wrapper{
 	display: flex;
+	
+}
+
+
+.swiper-slide.swiper-slide__review {
+	width: 100%;
 	flex-direction: column;
-	//width: calc(50% - 3rem / 2);
 	background-color: $color_white;
 	padding: 6.3rem 4.6rem 4.6rem 4.6rem;
 	position: relative;
@@ -90,19 +102,32 @@
 	& span {
 		color: $color_text;
 	}
-
+	
+	
 	@include bp($point_5) {
-		min-width: 100%;
+		min-height: 57rem;
 	}
+	
 }
 
 .review__text {
-	font-size: 2.2rem;
+	
 	font-weight: 400;
 	line-height: 3.4rem;
 	text-align: left;
 	color: $color_gray;
 	margin-bottom: 2.2rem;
+
+	
+	@include bp($point_4, min) {
+		font-size: 2.2rem;
+	}
+	
+	
+	@include bp($point_5) {
+		font-size: 2rem;
+	}
+	
 }
 
 .review__author {
