@@ -3,7 +3,7 @@ section.production {
 	padding-bottom: 18.5rem;
 }
 
-.production__title {
+/*.production__title {
 	@extend %st_h2;
 
 	position: relative;
@@ -12,7 +12,7 @@ section.production {
 	&::before {
 		@include section_title_prefix(12rem, 0.4rem, 5rem, $color_accent);
 	}
-}
+}*/
 
 .production__content {
 	padding-left: 17.4rem;

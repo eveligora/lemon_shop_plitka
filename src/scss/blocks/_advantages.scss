@@ -70,6 +70,20 @@
 	}
 }
 
+.advantages__cont a {
+	@include bp($point_4, min) {
+		margin-top: 1.8rem;
+	}
+
+	@include bp($point_5) {
+		margin-top: 1.6rem;
+	}
+
+	@include bp($point_8) {
+		margin-top: 1.2rem;
+	}
+}
+
 .advantages__headline {
 	display: flex;
 	align-items: center;

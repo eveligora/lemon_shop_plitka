@@ -1,14 +1,18 @@
 @include bp($point_4, min) {
-	.our_range__title_in,
-    .our_range_descr_in {
-		padding-left: 16.3rem;
+	.our_range__title_in {
         margin-bottom: 3.6rem;
 	}
 }
 
 @include bp($point_5) {
 	.our_range__title_in {
-		padding-left: 11.1rem;
+        margin-bottom: 3.6rem;
+	}
+}
+
+@include bp($point_4, min) {
+    .our_range_descr_in {
+		padding-left: 16.3rem;
         margin-bottom: 3.6rem;
 	}
 }

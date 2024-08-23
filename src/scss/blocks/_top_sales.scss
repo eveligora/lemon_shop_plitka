@@ -1,24 +1,21 @@
 @include bp($point_4, min) {
 	.top_sales__title_in {
-		padding-left: 16.3rem;
 		margin-bottom: 7rem;
 	}
 }
 
 @include bp($point_5) {
 	.top_sales__title_in {
-		padding-left: 11.1rem;
 		margin-bottom: 7rem;
 	}
 }
 
-.title {
+/*.title {
 	font-family: $font_2;
 	font-size: 5rem;
 	font-weight: 700;
 	line-height: 6.3rem;
 	color: $color_black;
-	position: relative;
 
 	@include bp($point_5) {
 		font-size: 2.8rem;
@@ -45,7 +42,7 @@
 			left: -11.1rem;
 		}
 	}
-}
+}*/
 
 .top_sales__product_wrapper {
 	display: flex;
