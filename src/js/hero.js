@@ -1,4 +1,3 @@
-
 if (window.location.pathname === '/') {
 	new Swiper('.hero', {
 		direction: 'horizontal',
