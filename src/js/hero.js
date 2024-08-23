@@ -1,5 +1,5 @@
 
-if (window.location.pathname === '/index.html') {
+if (window.location.pathname === '/') {
 	new Swiper('.hero', {
 		direction: 'horizontal',
 		loop: true,
