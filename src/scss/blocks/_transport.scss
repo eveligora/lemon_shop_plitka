@@ -112,10 +112,7 @@
 	line-height: 3rem;
 	color: $color_gray;
 }
-.transport__order_btn {
-	@extend%green_btn;
-	@extend%btn_size;
-}
+
 .item__img_bg {
 	background-color: $bg_gray;
 	position: relative;
