@@ -24,3 +24,4 @@ const review = new Swiper('.swiper_review', {
 	  }
 	  
 	  });
+
