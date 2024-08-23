@@ -16,7 +16,7 @@
 .transport_form__title {
 	font-size: 2.4rem;
 	line-height: 3.4rem;
-	color: $color-text_1;
+	color: $color_text_1;
 }
 .transport_form__form {
 	display: flex;
@@ -48,7 +48,7 @@
 	}
 }
 input::placeholder {
-	color: $color-text_2;
+	color: $color_text_2;
 	font-style: italic;
 }
 
