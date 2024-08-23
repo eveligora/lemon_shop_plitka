@@ -45,6 +45,17 @@ body {
 	width: 100%;
 	margin: 0 auto;
 
+	@include bp($point_5) {
+		.container {
+			padding: 0 2rem;
+		}
+	}
+	@include bp($point_5) {
+		.section {
+			padding: 5rem 0;
+		}
+	}
+
 	&.container--wide {
 		max-width: 100%;
 
@@ -59,6 +70,10 @@ body {
 		@include bp($point_5) {
 			padding: 0rem;
 		}
+	}
+
+	&.container--narrow {
+		max-width: 124rem;
 	}
 }
 
@@ -85,6 +100,25 @@ body {
 	font-weight: 700;
 	text-align: left;
 	font-family: $font_2;
+
+	&.section__title--decor {
+		position: relative;
+		display: block;
+		width: 12rem;
+
+		&::before {
+			position: absolute;
+			content: '';
+			background-color: $color_accent;
+			max-width: 12rem;
+			width: 100%;
+			height: 0.4rem;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+		}
+	}
+
 	@include bp($point_4, min) {
 		font-size: 5rem;
 		line-height: 6.3rem;
@@ -94,20 +128,21 @@ body {
 		line-height: 3.2rem;
 	}
 }
-.section__border {
-	position: relative;
-	display: block;
-	width: 12rem;
 
-	&::before {
-		position: absolute;
-		content: '';
-		background-color: $color_accent;
-		max-width: 12rem;
-		width: 100%;
-		height: 0.4rem;
-		transform: translate(-50%, -50%);
-		left: 50%;
-		top: 50%;
-	}
-}
+// .section__border {
+// 	position: relative;
+// 	display: block;
+// 	width: 12rem;
+
+// 	&::before {
+// 		position: absolute;
+// 		content: '';
+// 		background-color: $color_accent;
+// 		max-width: 12rem;
+// 		width: 100%;
+// 		height: 0.4rem;
+// 		transform: translate(-50%, -50%);
+// 		left: 50%;
+// 		top: 50%;
+// 	}
+// }
