@@ -12,7 +12,7 @@ function scrollFunction() {
 	}
 }
 
-new Swiper('.services_slider', {
+new Swiper(".services_slider", {
 	spaceBetween: 30,
 	pagination: {
 		el: '.services_slider__pagination',
