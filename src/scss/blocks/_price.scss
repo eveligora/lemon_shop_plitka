@@ -1,53 +1,55 @@
-section{
-    &.section--price{
+section {
+    &.section--price {
         padding-top: 0px;
         padding-bottom: 0px;
         background: url(../../imgs/price/hero_price.png);
-     background-size: cover;
-    background-position: 100%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 44.4rem;
+        background-size: cover;
+        background-position: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 44.4rem;
 
         .container.container--price {
             width: 100%;
             height: 100%;
 
-    .title_w {
-        display: inline-block;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+            .title_w {
+                display: inline-block;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
 
-        .title_price{
-            font-weight: 700;
-            text-align: left;
-            font-family: $font_2;
-            color: $color_black;
+                .title_price {
+                    font-weight: 700;
+                    text-align: left;
+                    font-family: $font_2;
+                    color: $color_black;
 
-            @include bp($point_4, min) {
-                font-size: 5rem;
-                line-height: 6.3rem;
-            }
-            @include bp($point_5, max) {
-                font-size: 2.8rem;
-                line-height: 3.2rem;
+                    @include bp($point_4, min) {
+                        font-size: 5rem;
+                        line-height: 6.3rem;
+                    }
+
+                    @include bp($point_5, max) {
+                        font-size: 2.8rem;
+                        line-height: 3.2rem;
+                    }
+                }
             }
         }
     }
-    }
-}
 }
 
-.section_title_w{
+.section_title_w {
     margin-bottom: 7.6rem;
 }
 
-.table_price_w{
+.table_price_w {
     max-width: 142rem;
+    user-select: none;
 
-    .table_price1__head{
+    .table_price1__head {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -58,114 +60,136 @@ section{
         cursor: pointer;
 
 
-        .price_name__head{
+        .price_name__head {
             font-family: $font_2;
-font-size: 2.6rem;
-font-weight: 700;
-line-height: 3.6rem;
-text-align: left;
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 3.6rem;
+            text-align: left;
+            pointer-events: none;
         }
-        .price_name__descr{
+
+        .price_name__descr {
             font-family: $font_1;
-font-size: 2rem;
-font-weight: 400;
-line-height: 3rem;
-text-align: left;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 3rem;
+            text-align: left;
+            pointer-events: none;
         }
 
 
-        .price_img_w{
+        .price_img_w {
             display: flex;
             justify-content: space-between;
             // column-gap: 10rem;
             max-width: 28rem;
             width: 100%;
-                .price_img__prew{
-                    max-width: 15rem;
-                    width: 100%;
-                    .price_img{
-                        @extend %contain_img;
-                    }
-                }
 
+            .price_img__prew {
+                max-width: 15rem;
+                width: 100%;
+                pointer-events: none;
+
+                .price_img {
+                    @extend %contain_img;
+                    pointer-events: none;
+                }
+            }
+
+            .price_img__arrow {
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .price_img__arrow.closed {
+                transform: rotate(180deg);
+            }
         }
     }
 
 
 
 
-.table_price1__data{
-    width: 100%;
+    .table_price1__data {
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        display: none;
+        transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 
-    visibility: hidden;
-    pointer-events: none;
-    height: 0;
-
-    &.active{
-        visibility: visible;
-        pointer-events: auto;
-        height: auto;
-    }
-}
-
-
-thead{
-    font-family: $font_1;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 3rem;
-    background-color: $color_table_head;
-    color: $color-text_1;
-    height: 8.7rem;
-
-    th:first-child{
-        text-align: left;
-        padding-left: 5rem;
-    }
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+            max-height: 500px;
+            display: table;
+        }
     }
 
-    tbody{
+
+    thead {
+        font-family: $font_1;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 3rem;
+        background-color: $color_table_head;
+        color: $color-text_1;
+        height: 8.7rem;
+
+        th:first-child {
+            text-align: left;
+            padding-left: 5rem;
+        }
+    }
+
+    tbody {
         // height: 8.7rem;
         font-family: $font_1;
-        tr{
+
+        tr {
             height: 8.7rem;
         }
 
-        td{
-        font-size: 2.4rem;
-        font-weight: 700;
-        line-height: 3rem;
-        text-align: center;
+        td {
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 3rem;
+            text-align: center;
         }
 
-.color_t{
-    margin-left: 3.6rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 4.6rem;
-    .color_img_w{
-        max-width: 19.6rem;
-        width: 100%;
-        .color_img{
-            @extend %contain_img;
+        .color_t {
+            margin-left: 3.6rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 4.6rem;
+
+            .color_img_w {
+                max-width: 19.6rem;
+                width: 100%;
+
+                .color_img {
+                    @extend %contain_img;
+                }
+            }
+
+            .color_name {
+
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 3rem;
+                color: $color-text_1;
+            }
+        }
+
+        & tr:nth-child(odd) {
+            background-color: $color_table_row;
+        }
+
+        & tr:nth-child(even) {
+            background-color: $color_table_row2;
         }
     }
-    .color_name {
-
-font-size: 2rem;
-font-weight: 400;
-line-height: 3rem;
-color: $color-text_1;
-    }
-}
-
-    & tr:nth-child(odd) {
-    background-color: $color_table_row;
-    }
-    & tr:nth-child(even) {
-        background-color: $color_table_row2;
-        }
-}
 }
