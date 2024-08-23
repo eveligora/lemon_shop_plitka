@@ -102,24 +102,18 @@
 	}
 }
 
-.paving_car__btn {
-	@extend %transp_btn;
-	@extend %btn_size;
-
+.paving_car__cont button {
 	@include bp($point_4, min) {
-		padding: 2rem 4.3rem;
 		margin-top: 1.8rem;
         margin-left: 16.2rem;
 	}
 
 	@include bp($point_5) {
-		padding: 1.8rem 3.5rem;
 		margin-top: 1.6rem;
         margin-left: 0;
 	}
 
 	@include bp($point_8) {
-		padding: 1.5rem 3rem;
 		margin-top: 1.2rem;
         margin-left: 0;
 	}
