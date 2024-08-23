@@ -87,32 +87,32 @@
 	font-weight: 700;
 	margin-bottom: 2.6rem;
 
-	&::after {
+	/*&::after {
 		content: '';
 		display: block;
 		height: 0.5rem;
 		background-color: $color_accent;
-	}
+	}*/
 
 	@include bp($point_4, min) {
 		width: 41.4rem;
 		font-size: 5rem;
 
-		&::after {
+		/*&::after {
 			content: '';
 			display: block;
 			width: 12rem;
 			height: 0.5rem;
 			margin-top: 2.8rem;
 			background-color: $color_accent;
-		}
+		}*/
 	}
 
 	@include bp($point_5, max) {
 		width: 24.4rem;
 		font-size: 3.5rem;
 
-		&::after {
+		/*&::after {
 			content: '';
 			display: block;
 			width: 10.5rem;
@@ -120,7 +120,7 @@
 			margin-top: 2.8rem;
 			margin-bottom: 0.3rem;
 			background-color: $color_accent;
-		}
+		}*/
 	}
 
 	@include bp($point_6 + 95, max) {
