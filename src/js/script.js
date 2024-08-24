@@ -10,7 +10,6 @@ function scrollFunction() {
 	}
 }
 
-
 if (window.location.pathname === '/') {
 	new Swiper('.services_slider', {
 		spaceBetween: 30,
