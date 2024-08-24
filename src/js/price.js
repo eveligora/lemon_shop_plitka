@@ -1,6 +1,6 @@
 if (window.location.pathname === '/price.html') {
-	const tableBTN = document.querySelector('.table_price1__head');
-	const tableDATA = document.querySelector('.table_price1__data');
+	const tableBTN = document.querySelector('.table_price1_head');
+	const tableDATA = document.querySelector('.table_price1_data');
 	const arrow = document.querySelector('.price_img__arrow');
 
 	tableBTN.addEventListener('click', function () {
