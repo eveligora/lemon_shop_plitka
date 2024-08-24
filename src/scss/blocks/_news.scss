@@ -1,6 +1,14 @@
-// .container.container--news {
-// 	max-width: 140rem;
-// }
+.section_title_news{
+
+@include bp($point_2, min) {
+	margin-bottom: 10rem;
+}
+
+@include bp($point_3, max) {
+	margin-bottom: 3rem;
+}
+
+}
 .news_content {
 	display: flex;
 	align-items: center;

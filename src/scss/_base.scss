@@ -28,6 +28,7 @@ body {
 
 .main {
 	flex-grow: 1;
+	background-color: $color_white;
 }
 
 .section {
@@ -90,6 +91,12 @@ body {
 		@include bp($point_5) {
 			padding-left: 12.2rem;
 		}
+	}
+	&.section__title--centr {
+		text-align: center;
+	}
+	&.section__title--white {
+		color: $color_white;
 	}
 
 	//section__decor
