@@ -1,5 +1,4 @@
-section {
-    &.section--price {
+.section--price {
         padding-top: 0px;
         padding-bottom: 0px;
         background: url(../../imgs/price/hero_price.png);
@@ -8,7 +7,6 @@ section {
         background-repeat: no-repeat;
         height: 44.4rem;
     }
-}
 
 .hero_price_w {
     width: 100%;
