@@ -1,12 +1,12 @@
 .section--price {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        background: url(../../imgs/price/hero_price.png);
-        background-size: cover;
-        background-position: 100%;
-        background-repeat: no-repeat;
-        height: 44.4rem;
-    }
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: url(../../imgs/price/hero_price.png);
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    height: 44.4rem;
+}
 
 .hero_price_w {
     width: 100%;
@@ -35,12 +35,20 @@
     margin-bottom: 7.6rem;
 }
 
-.table_price_w {
+.table_price1_w {
+    display: flex;
+    flex-direction: column;
+    row-gap: 9rem;
+}
+
+.table_old_sity,
+.table_kerpich {
     max-width: 142rem;
     user-select: none;
 }
 
-.table_price1_head {
+
+.table_price_head {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,7 +109,7 @@
 
 
 
-.table_price1_data {
+.table_price_data {
     width: 100%;
     opacity: 0;
     pointer-events: none;
