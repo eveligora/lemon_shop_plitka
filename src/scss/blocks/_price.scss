@@ -42,7 +42,8 @@
 }
 
 .table_old_sity,
-.table_kerpich {
+.table_kerpich,
+.table_lvov {
     max-width: 142rem;
     user-select: none;
 }
@@ -176,7 +177,6 @@ tbody {
 
 .color_img_w {
     max-width: 19.6rem;
-    width: 100%;
 
     .color_img {
         @extend %contain_img;
