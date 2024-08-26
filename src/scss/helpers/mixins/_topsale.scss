@@ -5,7 +5,7 @@
 		height: $hight;
 		width: $width;
 		background-color: $color_accent;
-		z-index: -1;
+		z-index: 0;
 		left: $cordX;
 		bottom: $cordY;
 	} @else {
@@ -14,7 +14,7 @@
 		height: $width;
 		width: $hight;
 		background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
-		z-index: -1;
+		z-index: 0;
 		left: $cordX;
 		bottom: $cordY;
 	}
@@ -26,7 +26,7 @@
 		height: $hight;
 		width: $width;
 		background-color: $color_accent;
-		z-index: -1;
+		z-index: 0;
 		right: $cordX;
 		top: $cordY;
 	} @else {
@@ -35,7 +35,7 @@
 		height: $width;
 		width: $hight;
 		background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
-		z-index: -1;
+		z-index: 0;
 		right: $cordX;
 		top: $cordY;
 	}
