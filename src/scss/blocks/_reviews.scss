@@ -1,7 +1,23 @@
-@include bp($point_1, min) {
+@include bp($point_4, min) {
 	.container--review {
 		padding: 12rem 2rem;
 		position: relative;
+	}
+
+	@include bp($point_5) {
+		.container--review {
+			padding: 4rem 4rem;
+		}
+	}
+}
+.reviews__title_in {
+	margin-bottom: 3.4rem;
+}
+
+.reviews__title {
+	@include bp($point_5) {
+		margin-bottom: 5.7rem;
+		padding-top: 4rem;
 	}
 }
 
@@ -32,9 +48,20 @@
 		font-size: 2rem;
 		font-weight: 400;
 		line-height: 3rem;
-		text-align: left;
+		
 		color: $color_gray;
 		margin-bottom: 7.2rem;
+
+		
+		@include bp($point_4, min) {
+			text-align: left;
+		}
+		
+
+		@include bp($point_5) {
+			text-align: center;
+		}
+		
 	}
 }
 
@@ -140,7 +167,6 @@
 	@include bp($point_1) {
 		position: static;
 		max-width: 75rem;
-		padding-bottom: 4.2rem;
 	}
 }
 
