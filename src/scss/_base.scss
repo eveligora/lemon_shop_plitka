@@ -85,6 +85,20 @@ body {
 	color: $color_text;
 	text-align: left;
 
+	&.section__title--adaptive {
+		@include bp($point_4, min) {
+			padding-left: 16.2rem;
+
+			@include bp($point_5) {
+				padding-left: 12.2rem;
+			}
+		}
+
+		@include bp($point_5) {
+			text-align: center;
+		}
+	}
+
 	&.section__title--left {
 		padding-left: 16.2rem;
 
@@ -146,6 +160,42 @@ body {
 
 			@include bp($point_5) {
 				width: 8rem;
+			}
+		}
+	}
+
+	&.section__title--decor_adaptive {
+		@include bp($point_4, min) {
+			&::before {
+				position: absolute;
+				content: '';
+				width: 12rem;
+				height: 0.4rem;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: $color_accent;
+	
+				@include bp($point_5) {
+					width: 8rem;
+				}
+			}
+		}
+
+		@include bp($point_5) {
+			&::before {
+				position: absolute;
+				content: '';
+				width: 12rem;
+				height: 0.4rem;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				bottom: -2rem;
+				background-color: $color_accent;
+
+				@include bp($point_5) {
+					width: 8rem;
+				}
 			}
 		}
 	}

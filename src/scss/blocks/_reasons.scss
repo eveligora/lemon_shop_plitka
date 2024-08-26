@@ -1,24 +1,6 @@
-/*.title--underline {
-	text-align: center;
-	position: relative;
+.reasons__title_in{
 	margin-bottom: 13.1rem;
-
-	&::before {
-		display: none;
-	}
-
-	&::after {
-		content: '';
-		position: absolute;
-		top: 15rem;
-		background: $color_accent no-repeat;
-		height: 0.4rem;
-		width: 12rem;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-}*/
-
+}
 .reasons__wrapper {
 	display: flex;
 	justify-content: space-around;
