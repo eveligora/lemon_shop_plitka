@@ -24,6 +24,9 @@
 	max-width: 50%;
 
 	img {
+		position: relative;
+		z-index: 1;
+
 		width: 51rem;
 		height: 34.5rem;
 		display: block;
@@ -31,7 +34,7 @@
 
 	@include bp($point_4, min) {
 		&::before {
-			@include square_dots_bef(38.1rem, 28.2rem, -6.2rem, 7.8rem);
+			@include square_dots_bef(38.1rem, 28.2rem, -6.2rem, 7.8rem, null, 'left');
 		}
 
 		&::after {

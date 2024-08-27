@@ -1,4 +1,4 @@
-@mixin square_dots_bef($width, $hight, $cordX, $cordY, $color: 'null') {
+@mixin square_dots_bef($width, $hight, $cordX, $cordY, $color: 'null', $position: 'right') {
 	@if $color == $color_accent {
 		content: '';
 		position: absolute;
@@ -6,7 +6,6 @@
 		width: $width;
 		background-color: $color_accent;
 		z-index: 0;
-		left: $cordX;
 		bottom: $cordY;
 	} @else {
 		content: '';
@@ -15,11 +14,16 @@
 		width: $hight;
 		background: url('../imgs/product/circle.svg') 0 0 / 1rem 1rem space;
 		z-index: 0;
-		left: $cordX;
 		bottom: $cordY;
 	}
+
+	@if $position == 'right' {
+        right: $cordX;
+    } @else if $position == 'left' {
+        left: $cordX;
+    }
 }
-@mixin square_dots_aft($width, $hight, $cordX, $cordY, $color: 'null') {
+@mixin square_dots_aft($width, $hight, $cordX, $cordY, $color: 'null', $position: 'left') {
 	@if $color == $color_accent {
 		content: '';
 		position: absolute;
@@ -39,4 +43,10 @@
 		right: $cordX;
 		top: $cordY;
 	}
+
+	@if $position == 'left' {
+        left: $cordX;
+    } @else if $position == 'right' {
+        right: $cordX;
+    }
 }
