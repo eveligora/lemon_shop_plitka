@@ -70,6 +70,7 @@ body {
 		padding: 0 2rem;
 	}
 
+	
 	&.container--wide {
 		max-width: 100%;
 
@@ -84,6 +85,12 @@ body {
 		@include bp($point_5) {
 			padding: 0rem;
 		}
+	}
+
+	&.container--wide_2 {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
 	}
 
 	&.container--narrow {

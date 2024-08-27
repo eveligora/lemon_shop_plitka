@@ -1,0 +1,16 @@
+.contacts {
+	display: flex;
+}
+.contacts_col {
+	width: 50%;
+	min-height: 87rem;
+}
+
+.contacts_map {
+	height: 100%;
+}
+
+.contacts_map__iframe {
+	height: 100%;
+	width: 100%;
+}
