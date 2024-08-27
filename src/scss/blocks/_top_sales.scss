@@ -61,11 +61,11 @@
 .decor {
 	@include bp($point_4, min) {
 		&::before {
-			@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem);
+			@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem, null, 'left');
 		}
 
 		&::after {
-			@include square_dots_aft(7.1rem, 7.1rem, -1.6rem, -3.1rem);
+			@include square_dots_aft(7.1rem, 7.1rem, -1.6rem, -3.1rem, null, 'right');
 		}
 	}
 }
