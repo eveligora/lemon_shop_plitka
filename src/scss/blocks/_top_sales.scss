@@ -61,11 +61,11 @@
 .decor {
 	@include bp($point_4, min) {
 		&::before {
-			@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem);
+			@include square_dots_bef(7.1rem, 7.1rem, -3.4rem, -3.4rem, null, 'left');
 		}
 
 		&::after {
-			@include square_dots_aft(7.1rem, 7.1rem, -3.1rem, -3.1rem);
+			@include square_dots_aft(7.1rem, 7.1rem, -1.6rem, -3.1rem, null, 'right');
 		}
 	}
 }
@@ -93,6 +93,7 @@
 	text-align: center;
 	position: relative;
 	transition: all $transition_dur ease-in-out;
+	z-index: 1;
 
 	&:hover {
 		box-shadow: 0 0.4rem 2rem 0 rgba(0, 0, 0, 0.25);

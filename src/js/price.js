@@ -1,15 +1,20 @@
-const tableBTN = document.querySelector('.table_price1__head');
-const tableDATA = document.querySelector('.table_price1__data');
-const arrow = document.querySelector('.price_img__arrow');
+// if (window.location.pathname === '/price.html') {
+const tableBTN = document.querySelectorAll('.table_price_head');
+const tableDATA = document.querySelectorAll('.table_price_data');
+const arrow = document.querySelectorAll('.price_img__arrow');
 
 if (tableBTN) {
-	tableBTN.addEventListener('click', function () {
-		tableDATA.classList.toggle('active');
+	tableBTN.forEach(function (e, index) {
+		e.addEventListener('click', function () {
+			console.log(index);
 
-		if (tableDATA.classList.contains('active')) {
-			arrow.classList.add('closed');
-		} else {
-			arrow.classList.remove('closed');
-		}
+			tableDATA[index].classList.toggle('active');
+
+			if (tableDATA[index].classList.contains('active')) {
+				arrow[index].classList.add('closed');
+			} else {
+				arrow[index].classList.remove('closed');
+			}
+		});
 	});
 }
