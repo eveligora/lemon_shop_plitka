@@ -1,4 +1,3 @@
-// if (window.location.pathname === '/price.html') {
 const tableBTN = document.querySelectorAll('.table_price_head');
 const tableDATA = document.querySelectorAll('.table_price_data');
 const arrow = document.querySelectorAll('.price_img__arrow');
