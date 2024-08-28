@@ -19,6 +19,6 @@ if (typeof Swiper === 'function') {
 		},
 	});
 }
-if (typeof Swiper !== 'undefined') {
+if (typeof Fancybox !== 'undefined') {
 	Fancybox.bind('[data-fancybox="gallery_1"]');
 }
