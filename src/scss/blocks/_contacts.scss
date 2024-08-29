@@ -133,6 +133,7 @@
 		border: 1px solid $color_gray_border;
 		border-radius: 5px;
 		padding-left: 7rem;
+		background-color: $color_white;
 
 		@include bp($point_3) {
 			width: 100%;
@@ -172,6 +173,7 @@
 		border: 1px solid $color_gray_border;
 		border-radius: 5px;
 		padding-left: 7rem;
+		background-color: $color_white;
 
 		@include bp($point_3) {
 			width: 100%;
