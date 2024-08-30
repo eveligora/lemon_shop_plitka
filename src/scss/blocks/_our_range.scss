@@ -14,6 +14,8 @@
     .our_range_descr_in {
 		padding-left: 16.3rem;
         margin-bottom: 3.6rem;
+
+       
 	}
 }
 
@@ -21,7 +23,16 @@
     .our_range_descr_in{
         padding-left: 0;
     }
+
+
+    
 }
+
+.page7{
+    padding-left: 0;
+}
+
+
 
 .our_range__descr{
     max-width: 110rem;
@@ -31,6 +42,7 @@
     line-height: 3rem;
     text-align: left;
     color: $color_gray;
+
 
     &:last-child{
         margin-bottom: 10.8rem;
@@ -44,5 +56,8 @@
     }
     
     
+
 }
+
+
 
