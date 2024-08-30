@@ -32,10 +32,10 @@
 		@extend %contain_img;
 	}
 
-	@include bp($point_1, min) {
+	@include bp($point_2, min) {
 		display: block;
 	}
-	@include bp($point_1) {
+	@include bp($point_3) {
 		display: none;
 	}
 }
@@ -72,7 +72,7 @@
 	padding-top: 3rem;
 	margin-top: -3rem;
 
-	@include bp($point_1) {
+	@include bp($point_2) {
 		margin-bottom: 3.4rem;
 	}
 }
@@ -89,12 +89,12 @@
 	display: flex;
 }
 
-@include bp($point_1, min) {
+@include bp($point_2, min) {
 	.reviews__wrapper {
 		padding-left: 16.3rem;
 	}
 }
-@include bp($point_1) {
+@include bp($point_3) {
 	.reviews__wrapper {
 		align-items: center;
 	}
@@ -105,9 +105,9 @@
 }
 
 .swiper-slide.swiper-slide__review {
+	overflow: visible !important;
 	height: auto;
 	width: 100%;
-	flex-direction: column;
 	background-color: $color_white;
 	padding: 6.3rem 4.6rem 4.6rem 4.6rem;
 	position: relative;
@@ -159,14 +159,15 @@
 	display: flex;
 	justify-content: space-between;
 
-	@include bp($point_1, min) {
+	@include bp($point_2, min) {
 		position: absolute;
 		max-width: 100rem;
 	}
 
-	@include bp($point_1) {
+	@include bp($point_3) {
 		position: static;
 		max-width: 75rem;
+		margin-bottom: 4rem;
 	}
 }
 

@@ -1,4 +1,4 @@
-if (window.location.pathname === '/page4.html') {
+if (typeof Swiper === 'function') {
 	const review = new Swiper('.swiper_review', {
 		direction: 'horizontal',
 		loop: true,
