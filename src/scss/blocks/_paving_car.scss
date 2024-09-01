@@ -5,7 +5,6 @@
 
 	@include bp($point_3) {
 		flex-direction: column;
-        row-gap: 4rem;
 	}
 }
 
@@ -14,22 +13,26 @@
 	max-width: 50%;
 
 	img {
+		position: relative;
+		z-index: 1;
+		
         @extend %contain_img;
         height: auto;
 	}
 
 	@include bp($point_4, min) {
 		&::before {
-			@include square_dots_bef(38.1rem, 28.2rem, -6.2rem, -1.4rem);
+			@include square_dots_bef(38.1rem, 28.2rem, -6.2rem, -1.4rem, null, 'left');
 		}
 
         &::after {
-            @include top_right_rect(9.2rem, 9.2rem, -4.6rem, -4.6rem, $color_accent);
+            @include square_dots_aft(9.2rem, 9.2rem, -4.6rem, -4.6rem, $color_accent, 'right');
         }
 	}
 
 	@include bp($point_3) {
 		max-width: 100%;
+		order: -1;
 
 		img {
 			width: 100%;

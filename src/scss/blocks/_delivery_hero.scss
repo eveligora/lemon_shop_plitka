@@ -1,0 +1,23 @@
+.delivery_hero {
+    height: 44.4rem;
+    align-content: center;
+
+    h2 {
+        font-family: $font_2;
+        font-weight: 700;
+        text-align: center;
+        color: $color_white;
+
+        @include bp($point_4, min) {
+            font-size: 5rem;
+        }
+
+        @include bp($point_2, min) {
+            font-size: 6rem;
+        }
+
+        @include bp($point_5, max) {
+            font-size: 3.5rem;
+        }
+    }
+}

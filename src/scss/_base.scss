@@ -1,7 +1,10 @@
 html {
-	// font-size: calc(100dvw / 1920 * 10);
-
 	font-size: 10px;
+
+	@media (min-width: $point_2) and (max-width: $point_0) {
+		font-size: calc(100dvw / 1920 * 10);
+	}
+	
 }
 
 html,
@@ -42,6 +45,22 @@ body {
 	&.section--bg {
 		background-color: $bg_gray;
 	}
+	&.section--stats {
+		position: relative;
+		background-image: url('../../imgs/stat_bg.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.7);
+			pointer-events: none;
+		}
+	}
 }
 
 .container {
@@ -54,6 +73,7 @@ body {
 		padding: 0 2rem;
 	}
 
+	
 	&.container--wide {
 		max-width: 100%;
 
@@ -70,6 +90,12 @@ body {
 		}
 	}
 
+	&.container--wide_2 {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+
 	&.container--narrow {
 		max-width: 124rem;
 	}
@@ -84,6 +110,20 @@ body {
 	font-weight: 700;
 	color: $color_text;
 	text-align: left;
+
+	&.section__title--adaptive {
+		@include bp($point_4, min) {
+			padding-left: 16.2rem;
+
+			@include bp($point_5) {
+				padding-left: 12.2rem;
+			}
+		}
+
+		@include bp($point_5) {
+			text-align: center;
+		}
+	}
 
 	&.section__title--left {
 		padding-left: 16.2rem;
@@ -150,13 +190,49 @@ body {
 		}
 	}
 
+	&.section__title--decor_adaptive {
+		@include bp($point_4, min) {
+			&::before {
+				position: absolute;
+				content: '';
+				width: 12rem;
+				height: 0.4rem;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: $color_accent;
+	
+				@include bp($point_5) {
+					width: 8rem;
+				}
+			}
+		}
+
+		@include bp($point_5) {
+			&::before {
+				position: absolute;
+				content: '';
+				width: 12rem;
+				height: 0.4rem;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				bottom: -2rem;
+				background-color: $color_accent;
+
+				@include bp($point_5) {
+					width: 8rem;
+				}
+			}
+		}
+	}
+
 	@include bp($point_4, min) {
 		font-size: 5rem;
 		line-height: 6.3rem;
 	}
 
 	@include bp($point_5) {
-		font-size: 2.8rem;
+		font-size: 2.6rem;
 		line-height: 3.2rem;
 	}
 }
