@@ -140,26 +140,6 @@
 			padding-left: 6rem;
 		}
 	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		left: 17rem;
-		top: 50%;
-		transform: translateY(-42%);
-		width: 1px;
-		height: 18px;
-		background-color: $color_accent;
-
-		@include bp($point_3) {
-			left: 15rem;
-		}
-
-		@include bp($point_8) {
-			left: 13rem;
-			height: 14px;
-		}
-	}
 }
 
 .form__input2 {
@@ -198,10 +178,6 @@
 		font-size: 2rem;
 		line-height: 2.2rem;
 	}
-}
-
-.form__input__text::placeholder {
-	color: $color_text;
 }
 
 .form__input--man {
