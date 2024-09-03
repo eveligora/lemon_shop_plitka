@@ -1,0 +1,104 @@
+.news__title_in {
+	margin-bottom: 6.4rem;
+}
+
+.news__list {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 6.5rem;
+	margin-right: -7.2rem;
+    margin-bottom: 10rem;
+}
+
+.news__item_w {
+	
+	padding-right: 7.2rem;
+
+	& a {
+		text-decoration: none;
+	}
+
+    
+    @include bp($point_4, min) {
+        flex: 1 1 50%;
+    }
+
+    
+    @include bp($point_5) {
+    flex: 1 1 100%;
+    }
+    
+    
+}
+
+.news__item {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	height: 62rem;
+}
+
+.news__img_w {
+	position: absolute;
+	top: 0;
+	width: 0;
+	width: 100%;
+	height: 100%;
+
+	& img {
+		@extend %cover_img;
+	}
+}
+
+.news__content {
+	max-width: 39.5rem;
+	background-color: $color_white;
+	padding: 2.5rem 4rem 0.5rem 4rem;
+	align-self: flex-end;
+	position: relative;
+	z-index: 1;
+
+	& h3 {
+		margin-bottom: 5rem;
+		font-family: $font_2;
+		font-size: 2.6rem;
+		font-weight: 700;
+		line-height: 3.2rem;
+		
+		color: $color_text;
+        white-space: pre-wrap;
+
+        
+        @include bp($point_4, min) {
+            text-align: left;
+        }
+        
+        @include bp($point_5) {
+        text-align: center;
+        }
+        
+        
+	}
+}
+
+.news__date_of_public {
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 3rem;
+	text-align: left;
+    color: $color_gray;
+
+    @include bp($point_4, min) {
+        text-align: left;
+    }
+    
+    @include bp($point_5) {
+    text-align: center;
+    }
+}
+
+.news_btn_in{
+    display: flex;
+    justify-content: center;
+}
