@@ -5,6 +5,9 @@
 	background-position: center;
 	padding: 6rem 0;
 
+	@include bp($point_3) {
+		background-position: left;
+	}
 }
 
 .transport_form__coll {
@@ -12,17 +15,40 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 3rem;
+
+	@include bp($point_3) {
+		align-items: center;
+	}
 }
 .transport_form__title {
-	font-size: 2.4rem;
-	line-height: 3.4rem;
-	color: $color-text_1;
+	
+	
+	color: $color_text_1;
+	
+	@include bp($point_2, min) {
+		line-height: 3.4rem;
+		font-size: 2.4rem;
+	}
+	
+	@include bp($point_3) {
+		line-height: 3rem;
+		font-size: 2rem;
+	}
+	
+	
 }
 .transport_form__form {
 	display: flex;
 	flex-direction: column;
 	row-gap: 3rem;
-	width: 60rem;
+
+	@include bp($point_2, min) {
+		width: 60rem;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
 }
 .transport_form__subtitle {
 	font-size: 2.8rem;
