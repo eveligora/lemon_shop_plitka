@@ -186,6 +186,7 @@ body {
 
 			@include bp($point_5) {
 				width: 8rem;
+				left: auto;
 			}
 		}
 	}
@@ -234,6 +235,8 @@ body {
 	@include bp($point_5) {
 		font-size: 2.6rem;
 		line-height: 3.2rem;
+		display: flex;
+		justify-content: center
 	}
 }
 
