@@ -21,21 +21,17 @@
 	}
 }
 .transport_form__title {
-	
-	
 	color: $color_text_1;
-	
+
 	@include bp($point_2, min) {
 		line-height: 3.4rem;
 		font-size: 2.4rem;
 	}
-	
+
 	@include bp($point_3) {
 		line-height: 3rem;
 		font-size: 2rem;
 	}
-	
-	
 }
 .transport_form__form {
 	display: flex;
@@ -77,4 +73,3 @@ input::placeholder {
 	color: $color_text_2;
 	font-style: italic;
 }
-

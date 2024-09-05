@@ -2,6 +2,7 @@
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+	column-gap: 8rem;
 
 	@include bp($point_3) {
 		flex-direction: column;
