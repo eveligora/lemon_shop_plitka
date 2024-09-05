@@ -64,7 +64,8 @@
 .gallery__descr {
 	width: 118.6rem;
 	height: 5.2rem;
-	padding-left: 18rem;
+	padding-left: 16.2rem;
+	margin-top: 3.6rem;
 	margin-bottom: 7rem;
 
 	font-family: $font_1;
@@ -78,6 +79,7 @@
 		height: 50%;
 		padding-left: 18rem;
 		font-size: 1.8rem;
+		margin-top: 3rem;
 		margin-bottom: 4rem;
 	}
 
@@ -85,12 +87,14 @@
 		width: 100%;
 		padding-left: 0rem;
 		font-size: 1.6rem;
+		margin-top: 2.8rem;
 		margin-bottom: 3rem;
 	}
 
 	@include bp($point_8) {
 		width: 100%;
 		font-size: 1.2rem;
+		margin-top: 2rem;
 		margin-bottom: 2rem;
 	}
 }

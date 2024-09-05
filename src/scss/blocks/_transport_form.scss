@@ -74,11 +74,7 @@
 	}
 }
 input::placeholder {
-	color: $color-text_2;
+	color: $color_text_2;
 	font-style: italic;
 }
-.transport_form__btn {
-	@extend%green_btn;
-	@extend%btn_size;
-	width: 28.2rem;
-}
+

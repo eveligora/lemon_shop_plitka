@@ -15,7 +15,7 @@
 		row-gap: 4rem;
 	}
 }
-.services__title_w {
+/*.services__title_w {
 	@include bp($point_3) {
 		display: flex;
 		column-gap: 2.6rem;
@@ -54,8 +54,8 @@
 			}
 		}
 	}
-}
-.services__title {
+}*/
+/*.services__title {
 	font-family: $font_2;
 	font-weight: 700;
 	color: $color_text;
@@ -70,7 +70,7 @@
 		font-size: 2.8rem;
 		line-height: 6.3rem;
 	}
-}
+}*/
 .services_slider {
 	width: 100%;
 }
@@ -163,26 +163,7 @@
 	line-height: 3rem;
 	color: $color_gray;
 }
-.services__info_btn {
-@extend%btn_services;
-transition: all .5s ease-in-out;
-	&:hover{
-		box-shadow: 2px 3px 35px -2px rgba(40,189,37,0.75);
-	}
-	&::after{
-		content: "";
 
-		background-image: url(../imgs/services/arrow.svg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 1.8rem;
-		height: 1.6rem;
-		margin-left: 1rem;
-		
-		
-	}
-}
 .services_slider__pagination {
 	span {
 		background-color: $color_accent;

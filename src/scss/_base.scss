@@ -1,7 +1,10 @@
 html {
-	// font-size: calc(100dvw / 1920 * 10);
-
 	font-size: 10px;
+
+	@media (min-width: $point_2) and (max-width: $point_0) {
+		font-size: calc(100dvw / 1920 * 10);
+	}
+	
 }
 
 html,
@@ -11,6 +14,10 @@ body {
 	font-weight: 400;
 	line-height: 1.3;
 	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $bg_gray;
 }
 
 .wrapper {
@@ -24,6 +31,7 @@ body {
 
 .main {
 	flex-grow: 1;
+	background-color: $color_white;
 }
 
 .section {
@@ -37,6 +45,22 @@ body {
 	&.section--bg {
 		background-color: $bg_gray;
 	}
+	&.section--stats {
+		position: relative;
+		background-image: url('../../imgs/stat_bg.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.7);
+			pointer-events: none;
+		}
+	}
 }
 
 .container {
@@ -46,16 +70,10 @@ body {
 	margin: 0 auto;
 
 	@include bp($point_5) {
-		.container {
-			padding: 0 2rem;
-		}
-	}
-	@include bp($point_5) {
-		.section {
-			padding: 5rem 0;
-		}
+		padding: 0 2rem;
 	}
 
+	
 	&.container--wide {
 		max-width: 100%;
 
@@ -71,75 +89,184 @@ body {
 			padding: 0rem;
 		}
 	}
-}
 
-.footer {
-	padding: 30px 0;
-	display: flex;
-	align-items: center;
-	min-height: 80px;
-}
-
-//Title
-.section_title_w {
-	display: flex;
-	@include bp($point_2, min) {
-		margin-bottom: 10rem;
-		column-gap: 4.3rem;
+	&.container--wide_2 {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
 	}
-	@include bp($point_3, max) {
-		margin-bottom: 3.5rem;
-		column-gap: 2.5rem;
+
+	&.container--narrow {
+		max-width: 124rem;
 	}
 }
+
+//section__title
 .section__title {
-	font-weight: 700;
-	text-align: left;
-	font-family: $font_2;
+	position: relative;
+	display: block;
 
-	&.section__title--decor {
-		position: relative;
-		display: block;
-		width: 12rem;
-	
+	font-family: $font_2;
+	font-weight: 700;
+	color: $color_text;
+	text-align: left;
+
+	&.section__title--adaptive {
+		@include bp($point_4, min) {
+			padding-left: 16.2rem;
+
+			@include bp($point_5) {
+				padding-left: 12.2rem;
+			}
+		}
+
+		@include bp($point_5) {
+			text-align: center;
+		}
+	}
+
+	&.section__title--left {
+		padding-left: 16.2rem;
+
+		@include bp($point_5) {
+			padding-left: 12.2rem;
+		}
+	}
+	&.section__title--centr {
+		text-align: center;
+	}
+	&.section__title--white {
+		color: $color_white;
+	}
+
+	//section__decor
+	&.section__title--decor_left {
 		&::before {
 			position: absolute;
 			content: '';
+			width: 12rem;
+			height: 0.4rem;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
 			background-color: $color_accent;
-			max-width: 12rem;
-			width: 100%;
+
+			@include bp($point_5) {
+				width: 8rem;
+			}
+		}
+	}
+
+	&.section__title--decor_bottom {
+		&::before {
+			position: absolute;
+			content: '';
+			width: 12rem;
 			height: 0.4rem;
 			transform: translate(-50%, -50%);
 			left: 50%;
-			top: 50%;
+			bottom: -2rem;
+			background-color: $color_accent;
+
+			@include bp($point_5) {
+				width: 8rem;
+			}
 		}
 	}
+
+	&.section__title--decor_bottom_left {
+		&::before {
+			position: absolute;
+			content: '';
+			width: 12rem;
+			height: 0.4rem;
+			left: 0;
+			bottom: -2rem;
+			background-color: $color_accent;
+
+			@include bp($point_5) {
+				width: 8rem;
+				left: auto;
+			}
+		}
+	}
+
+	&.section__title--decor_adaptive {
+		@include bp($point_4, min) {
+			&::before {
+				position: absolute;
+				content: '';
+				width: 12rem;
+				height: 0.4rem;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: $color_accent;
 	
+				@include bp($point_5) {
+					width: 8rem;
+				}
+			}
+		}
+
+		@include bp($point_5) {
+			&::before {
+				position: absolute;
+				content: '';
+				width: 12rem;
+				height: 0.4rem;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				bottom: -2rem;
+				background-color: $color_accent;
+
+				@include bp($point_5) {
+					width: 8rem;
+				}
+			}
+		}
+	}
+
 	@include bp($point_4, min) {
 		font-size: 5rem;
 		line-height: 6.3rem;
 	}
-	@include bp($point_5, max) {
-		font-size: 2.8rem;
+
+	@include bp($point_5) {
+		font-size: 2.6rem;
 		line-height: 3.2rem;
+		display: flex;
+		justify-content: center
 	}
 }
 
+//button
+.btn_green {
+	@extend %btn_green;
+	@extend %btn_size;
+	position: relative;
 
-// .section__border {
-// 	position: relative;
-// 	display: block;
-// 	width: 12rem;
+	&.btn_green--arrow {
+		padding: 0 9rem 0 7rem;
 
-// 	&::before {
-// 		position: absolute;
-// 		content: '';
-// 		background-color: $color_accent;
-// 		max-width: 12rem;
-// 		width: 100%;
-// 		height: 0.4rem;
-// 		transform: translate(-50%, -50%);
-// 		left: 50%;
-// 		top: 50%;
-// 	}
-// }
+		&:hover::after {
+			filter: invert(100%);
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			background: url('../imgs/mod_arrow.svg') center/100% no-repeat;
+			top: 3.4rem;
+			right: 6rem;
+			width: 1.8rem;
+			height: 1.5rem;
+			transition: all $transition_dur ease-in-out;
+		}
+	}
+}
+
+.btn_transp {
+	@extend %btn_transp;
+	@extend %btn_size;
+}

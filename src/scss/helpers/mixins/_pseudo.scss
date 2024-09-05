@@ -12,7 +12,7 @@
 @mixin bottom_left_rect($width, $hight, $bottom, $left, $background) {
 	content: '';
 	position: absolute;
-	z-index: -1;
+	z-index: 0;
 	width: $width;
 	height: $hight;
 	bottom: $bottom;
@@ -29,4 +29,13 @@
 	left: -($width + $offset);
 	transform: translateY(-50%);
 	background: $color;
+}
+
+@mixin section_title_after_bottom($width, $distance, $height: 4px) {
+	content: '';
+	display: block;
+	width: $width;
+	height: $height;
+	margin-top: $distance;
+	background-color: $color_accent;
 }

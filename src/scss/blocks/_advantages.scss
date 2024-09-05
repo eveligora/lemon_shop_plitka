@@ -24,6 +24,9 @@
 	max-width: 50%;
 
 	img {
+		position: relative;
+		z-index: 1;
+
 		width: 51rem;
 		height: 34.5rem;
 		display: block;
@@ -31,7 +34,7 @@
 
 	@include bp($point_4, min) {
 		&::before {
-			@include square_dots_bef(38.1rem, 28.2rem, -6.2rem, 7.8rem);
+			@include square_dots_bef(38.1rem, 28.2rem, -6.2rem, 7.8rem, null, 'left');
 		}
 
 		&::after {
@@ -67,6 +70,20 @@
 	@include bp($point_8) {
 		max-width: 100%;
 		margin-top: 2rem;
+	}
+}
+
+.advantages__cont a {
+	@include bp($point_4, min) {
+		margin-top: 1.8rem;
+	}
+
+	@include bp($point_5) {
+		margin-top: 1.6rem;
+	}
+
+	@include bp($point_8) {
+		margin-top: 1.2rem;
 	}
 }
 
@@ -151,22 +168,3 @@
 	font-weight: 400;
 }
 
-.advantages__btn {
-	@extend %transp_btn;
-	@extend %btn_size;
-
-	@include bp($point_4, min) {
-		padding: 2rem 4.3rem;
-		margin-top: 1.8rem;
-	}
-
-	@include bp($point_5) {
-		padding: 1.8rem 3.5rem;
-		margin-top: 1.6rem;
-	}
-
-	@include bp($point_8) {
-		padding: 1.5rem 3rem;
-		margin-top: 1.2rem;
-	}
-}

@@ -87,40 +87,38 @@
 	font-weight: 700;
 	margin-bottom: 2.6rem;
 
-	&::after {
+	/*&::after {
 		content: '';
 		display: block;
 		height: 0.5rem;
 		background-color: $color_accent;
-	}
+	}*/
 
 	@include bp($point_4, min) {
 		width: 41.4rem;
 		font-size: 5rem;
 
-		&::after {
+		/*&::after {
 			content: '';
 			display: block;
 			width: 12rem;
-			height: 0.5rem;
 			margin-top: 2.8rem;
 			background-color: $color_accent;
-		}
+		}*/
 	}
 
 	@include bp($point_5, max) {
 		width: 24.4rem;
 		font-size: 3.5rem;
 
-		&::after {
+		/*&::after {
 			content: '';
 			display: block;
 			width: 10.5rem;
-			height: 0.5rem;
 			margin-top: 2.8rem;
 			margin-bottom: 0.3rem;
 			background-color: $color_accent;
-		}
+		}*/
 	}
 
 	@include bp($point_6 + 95, max) {
@@ -166,34 +164,4 @@
 	}
 }
 
-.hero__catalog_link {
-	@extend %green_btn;
-	border-radius: 4.9rem;
-	font-family: $font_1;
-	font-size: 2rem;
-	font-weight: 700;
 
-	@include bp($point_4, min) {
-		width: 28.2rem;
-		height: 8.8rem;
-		line-height: 8.8rem;
-	}
-
-	@media screen and (max-width: $point_5) and (min-width: ($point_6 + 95)) {
-		width: 33.5rem;
-		height: 7.8rem;
-		line-height: 7.8rem;
-		margin: auto;
-		padding: 0;
-	}
-
-	@include bp($point_6 + 94.98, max) {
-		display: block;
-		max-width: 100%;
-		width: 33.5rem;
-		height: 7.8rem;
-		line-height: 7.8rem;
-		margin: auto;
-		padding: 0;
-	}
-}

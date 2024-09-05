@@ -79,7 +79,7 @@
 .transport__item_subtitle {
 	font-size: 2rem;
 	line-height: 3rem;
-	color: $color-text_1;
+	color: $color_text_1;
 	margin-bottom: 5.8rem;
 }
 .transport__order_w {
@@ -103,7 +103,7 @@
 	font-size: 4rem;
 	font-weight: 700;
 	line-height: 3rem;
-	color: $color-text_1;
+	color: $color_text_1;
 	margin-bottom: 0.6rem;
 }
 .transport__price_descr {
@@ -112,10 +112,7 @@
 	line-height: 3rem;
 	color: $color_gray;
 }
-.transport__order_btn {
-	@extend%green_btn;
-	@extend%btn_size;
-}
+
 .item__img_bg {
 	background-color: $bg_gray;
 	position: relative;

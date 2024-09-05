@@ -3,19 +3,7 @@ section.production {
 	padding-bottom: 18.5rem;
 }
 
-.production__title {
-	@extend %st_h2;
-
-	position: relative;
-	margin-bottom: 3rem;
-
-	&::before {
-		@include section_title_prefix(12rem, 0.4rem, 5rem, $color_accent);
-	}
-}
-
 .production__content {
-	padding-left: 17.4rem;
 	display: flex;
 	gap: 7rem 18.7rem;
 	width: 100%;
@@ -33,11 +21,24 @@ section.production {
 .production__description {
 	@extend %st_text;
 	@extend %text_gray;
+	padding-left: 16.2rem;
+	margin-top: 3.6rem;
+
+	@include bp($point_3) {
+		padding-left: 0;
+	}
+
+	@include bp($point_5) {
+		font-size: 2rem;
+	}
+
+	@include bp($point_8) {
+		font-size: 1.8rem;
+	}
 }
 
 .production__image {
 	position: relative;
-	align-self: start;
 	width: 46rem;
 	height: 46rem;
 	margin-top: 3rem;
@@ -54,10 +55,21 @@ section.production {
 	}
 
 	&::before {
-		@include top_right_rect(9.2rem, 9.2rem, -4.6rem, -4.6rem, $color_accent);
+		@include square_dots_aft(9.2rem, 9.2rem, -4.6rem, -4.6rem, $color_accent, 'right');
 	}
 
 	img {
 		@extend %cover_img;
+		position: absolute;
+		z-index: 1;
+	}
+
+	@include bp($point_5) {
+		max-width: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 }
