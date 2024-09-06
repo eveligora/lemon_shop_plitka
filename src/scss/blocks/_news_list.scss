@@ -52,12 +52,22 @@
 }
 
 .news__content {
-	max-width: 39.5rem;
+	
 	background-color: $color_white;
 	padding: 2.5rem 4rem 0.5rem 4rem;
 	align-self: flex-end;
 	position: relative;
 	z-index: 1;
+
+	@include bp($point_4,min) {
+		max-width: 39.5rem;
+	}
+	
+	@include bp($point_5) {
+	width: 100%;
+	}
+
+	
 
 	& h3 {
 		margin-bottom: 5rem;
