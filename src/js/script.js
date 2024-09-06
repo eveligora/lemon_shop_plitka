@@ -1,4 +1,5 @@
-const header = document.querySelector('.header');
+
+ const header = document.querySelector('.header');
 window.onscroll = function () {
 	scrollFunction();
 };
@@ -8,7 +9,7 @@ function scrollFunction() {
 	} else {
 		header.classList.remove('header--scroll');
 	}
-}
+} 
 
 if (typeof Swiper === 'function') {
 	new Swiper('.services_slider', {
