@@ -5,6 +5,9 @@ html {
 		font-size: calc(100dvw / 1920 * 10);
 	}
 	
+	&:has(.open){
+		overflow: hidden;
+	}
 }
 
 html,
@@ -18,6 +21,10 @@ body {
 
 body {
 	background-color: $bg_gray;
+	&:has(.open){
+		overflow: visible;
+		height: 100%;
+	}
 }
 
 .wrapper {
@@ -264,6 +271,10 @@ body {
 			transition: all $transition_dur ease-in-out;
 		}
 	}
+
+	
+	
+	
 }
 
 .btn_transp {

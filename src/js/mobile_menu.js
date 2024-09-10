@@ -1,13 +1,7 @@
 function checkScreenWidth() {
     if (document.documentElement.clientWidth < 1023.98) {
-        for_mobile.insertAdjacentHTML('beforebegin', `<div class="header_logo_w">
-						<a href="./" class="header_logo">
-							<img src="./imgs/svg/logo.svg" alt="Logo" class="header_logo__img" />
-						</a>
-					</div>`)
-
-        document.querySelectorAll('.header_nav__link').forEach(function (link) {
-            link.addEventListener('click', function (event) {
+        document.querySelectorAll('.header_nav__link').forEach(link => {
+            link.addEventListener('click',  event => {
                 const parentLi = link.parentElement;
                 const submenu = parentLi.querySelector('.header_dropdown');
 
@@ -20,29 +14,39 @@ function checkScreenWidth() {
             });
         });
 
+
     } else {
-        for_desktop.insertAdjacentHTML('afterend', `<div class="header_logo_w">
-            <a href="./" class="header_logo">
-                <img src="./imgs/svg/logo.svg" alt="Logo" class="header_logo__img" />
-            </a>
-        </div>`)
-
-
+        const header = document.querySelector('.header');
+        window.onscroll = function () {
+            scrollFunction();
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.classList.add('header--scroll');
+            } else {
+                header.classList.remove('header--scroll');
+            }
+        }
     }
 }
-
 window.onload = checkScreenWidth();
 
-const menuButton = document.querySelector(".nav__burger");
-const menu = document.querySelector(".header_nav__menu");
+const burger = document.querySelector('.nav__burger');
+const menu = document.querySelector('.header_nav__menu');
 
+function removeOpenClass() {
+    burger.classList.remove('open');
+    menu.classList.remove('open');
+}
 
-menuButton.addEventListener("click", function () {
-    menu.classList.toggle("open");
-    menuButton.classList.toggle("open");
-
+document.addEventListener('click', (event) => {
+    if (!burger.contains(event.target) && !menu.contains(event.target)) {
+        removeOpenClass();
+    }
 });
 
-
-
-
+burger.addEventListener('click', (event) => {
+    event.stopPropagation();
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+});

@@ -49,13 +49,19 @@
 //size extends
 %btn_size {
 	min-width: 28.2rem;
-	height: 8.8rem;
+	height: 8rem;
 	font-size: 2rem;
 	border-radius: 4.9rem;
 	font-weight: 700;
 	line-height: 3rem;
 	font-family: $font_1;
 	padding: 0 7rem;
+
+	
+	@include bp($point_6) {
+	width: 100%;
+	}
+	
 }
 
 %btn_news {
