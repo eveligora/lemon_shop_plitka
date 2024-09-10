@@ -27,12 +27,12 @@
 
 	@include bp($point_3) {
 		flex-direction: column;
-		align-items: flex-start;
 		padding: 1rem;
 	}
 
 	@include bp($point_5) {
 		padding: 0.8rem;
+		gap: 5.6rem;
 	}
 
 	@include bp($point_8) {
@@ -149,10 +149,11 @@
 	@include bp($point_8) {
 		font-size: 1.8rem;
 		line-height: 2rem;
+		text-align: center;
 
 		span {
 			width: 6rem;
-			margin: 8px 0;
+			margin: 8px auto;
 		}
 	}
 }
@@ -175,15 +176,16 @@
 	}
 
 	@include bp($point_5) {
-		width: 15rem;
+		width: 18rem;
 		font-size: 1.5rem;
 		line-height: 2rem;
 	}
 
 	@include bp($point_8) {
-		width: 13rem;
+		width: 18rem;
 		font-size: 1.2rem;
 		line-height: 1.8rem;
+		text-align: center;
 	}
 }
 
@@ -197,7 +199,7 @@
 	}
 
 	@include bp($point_5) {
-		width: 16rem;
+		width: 18rem;
 		font-size: 1.5rem;
 		line-height: 2rem;
 	}
