@@ -46,9 +46,8 @@
 			background-color: rgba(255 255 255 / 0.5);
 		}
 
-		@include bp($point_5, max) {
-			width: 3rem;
-			background-color: transparent;
+		@include bp($point_5) {
+			display: none;
 		}
 	}
 
@@ -68,6 +67,21 @@
 	}
 }
 
+.bg {
+	background-repeat: no-repeat;
+
+	
+	@include bp($point_4, min) {
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+	
+
+	@include bp($point_5) {
+		background-position: 37% 0;
+	}
+}
+
 .hero__content {
 	@include bp($point_4, min) {
 		padding-bottom: 2.6rem;
@@ -78,14 +92,14 @@
 	}
 
 	@include bp($point_6 + 94.98, max) {
-		padding: 0 0 9rem 0;
+		padding: 0 0 7.6rem 0;
 	}
 }
 
 .hero__title {
 	font-family: $font_2;
 	font-weight: 700;
-	margin-bottom: 2.6rem;
+	position: relative;
 
 	/*&::after {
 		content: '';
@@ -97,33 +111,50 @@
 	@include bp($point_4, min) {
 		width: 41.4rem;
 		font-size: 5rem;
+		margin-bottom: 10rem;
 
-		/*&::after {
+		&::after {
 			content: '';
+			position: absolute;
+			top: 24rem;
+			left: 0rem;
 			display: block;
-			width: 12rem;
-			margin-top: 2.8rem;
+			width: 10.5rem;
+			height: 0.5rem;
 			background-color: $color_accent;
-		}*/
+		}
 	}
 
-	@include bp($point_5, max) {
-		width: 24.4rem;
-		font-size: 3.5rem;
+	/* @include bp($point_5, max) {
+		
 
-		/*&::after {
+		&::after {
 			content: '';
 			display: block;
 			width: 10.5rem;
 			margin-top: 2.8rem;
 			margin-bottom: 0.3rem;
 			background-color: $color_accent;
-		}*/
-	}
+		}
+	} */
 
-	@include bp($point_6 + 95, max) {
-		margin-left: auto;
-		margin-right: auto;
+	@include bp($point_5) {
+		padding: 1rem 0 4.5rem 6rem;
+		position: relative;
+		font-size: 3.5rem;
+		line-height: 1.25;
+		margin-bottom: 1rem;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 16rem;
+			left: 6rem;
+			display: block;
+			width: 10.5rem;
+			height: 0.5rem;
+			background-color: $color_accent;
+		}
 	}
 }
 
@@ -138,14 +169,13 @@
 	}
 
 	@include bp($point_5, max) {
-		width: 24rem;
+		width: 28rem;
 		font-size: 1.6rem;
-		line-height: 1.75;
+		line-height: 1.5;
+		padding-left: 6rem;
 	}
 
-	@include bp($point_6 + 95, max) {
-		margin: 0 auto;
-	}
+
 }
 
 .hero__catalog-link-wrapper {
@@ -163,5 +193,3 @@
 		padding: 0;
 	}
 }
-
-
