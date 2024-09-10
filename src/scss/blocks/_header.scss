@@ -15,20 +15,20 @@
 	color: $color_white;
 	transition: height $transition_dur ease-in-out;
 
-	
+
 	@include bp($point_4, min) {
 		align-items: center;
 		height: $header_top_height;
 	}
 
-	
+
 	@include bp($point_5) {
 		align-items: flex-end;
 		padding-bottom: 1.5rem;
 		height: 7.6rem;
 	}
-	
-	
+
+
 
 	&::before {
 		position: absolute;
@@ -197,10 +197,11 @@
 		right: 0;
 		overflow: scroll;
 		padding: 12rem 0 12rem 0;
-		
+
 		@include bp($point_6, min) {
 			width: 37.5rem;
 		}
+
 		@include bp($point_6) {
 			width: 100%
 		}
@@ -337,7 +338,7 @@
 
 	width: calc((100% - 47rem) / 2);
 	display: flex;
-	column-gap: 4rem;
+	column-gap: 9rem;
 	justify-content: space-between;
 
 

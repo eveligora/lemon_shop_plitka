@@ -136,7 +136,7 @@ body {
 		padding-left: 16.2rem;
 
 		@include bp($point_5) {
-			padding-left: 12.2rem;
+			padding-left: 5.2rem;
 		}
 	}
 	&.section__title--centr {
@@ -159,7 +159,7 @@ body {
 			background-color: $color_accent;
 
 			@include bp($point_5) {
-				width: 8rem;
+				width: 8.7rem;
 			}
 		}
 	}

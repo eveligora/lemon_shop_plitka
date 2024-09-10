@@ -6,7 +6,7 @@
 
 @include bp($point_5) {
 	.top_sales__title_in {
-		margin-bottom: 7rem;
+		margin-bottom: 3.8rem;
 	}
 }
 .top_sales__product_wrapper {
@@ -20,7 +20,7 @@
 
 	position: relative;
 	width: 100%;
-	row-gap: 2rem;
+	row-gap: 2.5rem;
 }
 
 .decor {
@@ -51,7 +51,7 @@
 	flex-direction: column;
 	justify-content: stretch;
 	background-color: $color_white;
-	padding: 3.4rem 3.5rem 3.6rem 3.5rem;
+	padding: 2.5rem 3.4rem 3.6rem 4.1rem;
 	border: 0.1rem solid $bg_gray;
 	box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
 	border-radius: 0.1rem;
@@ -68,8 +68,8 @@
 .product_card__img_wrapper {
 	position: relative;
 	width: 100%;
-	height: 25.3rem;
-	margin-bottom: 1.8rem;
+	height: 26rem;
+	margin-bottom: 1.5rem;
 
 	& .imgs {
 		@extend %cover_img;
@@ -83,7 +83,7 @@
 	font-weight: 700;
 	font-size: 2.6rem;
 	line-height: 2.6rem;
-	margin-bottom: 1.6rem;
+	margin-bottom: 1rem;
 	color: $color_text;
 }
 
@@ -96,17 +96,17 @@
 }
 
 .product_card__high {
-	margin-bottom: 1.2rem;
+	margin-bottom: 0.1rem;
 }
 
 .product_card__color_title {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 1.8rem;
+	margin-bottom: 1rem;
 }
 
 .product_card__color_wrapper {
-	margin-bottom: 2.4rem;
+	margin-bottom: 2rem;
 }
 
 .product_card__price {
@@ -128,7 +128,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 2.2rem;
+	gap: 2rem;
 }
 
 .product_card__availabel_color {
