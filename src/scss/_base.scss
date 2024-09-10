@@ -52,9 +52,14 @@ body {
 	&.section--bg {
 		background-color: $bg_gray;
 	}
+	&.section--pav {
+		@include bp($point_5) {
+			padding: 4rem 0;
+		}
+	}
 	&.section--stats {
 		position: relative;
-		background-image: url('../../imgs/stat_bg.jpg');
+		background-image: url('.././imgs/stat_bg.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		&::before {
@@ -240,10 +245,13 @@ body {
 	}
 
 	@include bp($point_5) {
-		font-size: 2.6rem;
+		font-size: 2.8rem;
 		line-height: 3.2rem;
-		display: flex;
-		justify-content: center
+	}
+	
+	@include bp($point_8) {
+		font-size: 2.4rem;
+		line-height: 3rem;
 	}
 }
 
