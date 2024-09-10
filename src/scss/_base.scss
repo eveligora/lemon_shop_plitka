@@ -45,6 +45,11 @@ body {
 	&.section--bg {
 		background-color: $bg_gray;
 	}
+	&.section--pav {
+		@include bp($point_5) {
+			padding: 4rem 0;
+		}
+	}
 	&.section--stats {
 		position: relative;
 		background-image: url('../../imgs/stat_bg.jpg');
